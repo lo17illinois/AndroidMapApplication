@@ -33,6 +33,214 @@ Meeting notes: Followed the milestone 1 task instructions and still waiting for 
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
+| alya2          |                                 |                       |
+| binglin3       |                                 |                       |
+| lo17           |                                 |                       |
+| co17           | setup project environment       | Submit screenshot for milestone 1. Reserve time for next meeting. |
+| hadil          |                                 |                       |
+| phulare2       |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+</br>
+
+<b>Week 2</b>
+</br>
+Members present: List the NetID of the people who attended the meeting
+</br>
+Meeting notes: Explain the overall team progress and a summary of discussion
+</br>
+| NetID          | Progress from last week         | Tasks for next week   |
+| ---------------| --------------------------------| ----------------------|
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+</br>
+
+
+<b>Week 3</b>
+</br>
+Members present: List the NetID of the people who attended the meeting
+</br>
+Meeting notes: Explain the overall team progress and a summary of discussion
+</br>
+| NetID          | Progress from last week         | Tasks for next week   |
+| ---------------| --------------------------------| ----------------------|
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+</br>
+
+
+<b>Week 4</b>
+</br>
+Members present: List the NetID of the people who attended the meeting
+</br>
+Meeting notes: Explain the overall team progress and a summary of discussion
+</br>
+| NetID          | Progress from last week         | Tasks for next week   |
+| ---------------| --------------------------------| ----------------------|
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+</br>
+
+
+<b>Week 5</b>
+</br>
+Members present: List the NetID of the people who attended the meeting
+</br>
+Meeting notes: Explain the overall team progress and a summary of discussion
+</br>
+| NetID          | Progress from last week         | Tasks for next week   |
+| ---------------| --------------------------------| ----------------------|
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+</br>
+
+
+<b>Week 6</b>
+</br>
+Members present: List the NetID of the people who attended the meeting
+</br>
+Meeting notes: Explain the overall team progress and a summary of discussion
+</br>
+| NetID          | Progress from last week         | Tasks for next week   |
+| ---------------| --------------------------------| ----------------------|
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+</br>
+
+
+<b>Week 7</b>
+</br>
+Members present: List the NetID of the people who attended the meeting
+</br>
+Meeting notes: Explain the overall team progress and a summary of discussion
+</br>
+| NetID          | Progress from last week         | Tasks for next week   |
+| ---------------| --------------------------------| ----------------------|
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+</br>
+
+
+<b>Week 8</b>
+</br>
+Members present: List the NetID of the people who attended the meeting
+</br>
+Meeting notes: Explain the overall team progress and a summary of discussion
+</br>
+| NetID          | Progress from last week         | Tasks for next week   |
+| ---------------| --------------------------------| ----------------------|
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+</br>
+
+
+<b>Week 9</b>
+</br>
+Members present: List the NetID of the people who attended the meeting
+</br>
+Meeting notes: Explain the overall team progress and a summary of discussion
+</br>
+| NetID          | Progress from last week         | Tasks for next week   |
+| ---------------| --------------------------------| ----------------------|
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+</br>
+
+
+<b>Week 10</b>
+</br>
+Members present: List the NetID of the people who attended the meeting
+</br>
+Meeting notes: Explain the overall team progress and a summary of discussion
+</br>
+| NetID          | Progress from last week         | Tasks for next week   |
+| ---------------| --------------------------------| ----------------------|
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+</br>
+
+
+<b>Week 11</b>
+</br>
+Members present: List the NetID of the people who attended the meeting
+</br>
+Meeting notes: Explain the overall team progress and a summary of discussion
+</br>
+| NetID          | Progress from last week         | Tasks for next week   |
+| ---------------| --------------------------------| ----------------------|
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+</br>
+
+
+<b>Week 12</b>
+</br>
+Members present: List the NetID of the people who attended the meeting
+</br>
+Meeting notes: Explain the overall team progress and a summary of discussion
+</br>
+| NetID          | Progress from last week         | Tasks for next week   |
+| ---------------| --------------------------------| ----------------------|
 |                |                                 |                       |
 |                |                                 |                       |
 |                |                                 |                       |
