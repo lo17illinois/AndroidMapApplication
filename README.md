@@ -16,3 +16,29 @@ The code for CS427 Android app.
 |               |               |             |               |               |
 |               |               |             |               |               |
 <br/>
+
+<b>Weekly Progress Reports</b>
+</br> 
+</br>
+Meeting time: 09/27/2023 9pm - 10pm CST
+</br> 
+Meeting location (zoom link): https://illinois.zoom.us/j/8356015515?pwd=YlViWXRGZTJlMk1wWFlLSjFlOHNQZz09
+</br> 
+</br>
+<b>Week 1</b>
+</br>
+Members present: binglin3, lo17, co17, hadil, phulare2
+</br>
+Meeting notes: Followed the milestone 1 task instructions and still waiting for two team members(Danxuan LIANG and Nithin Nathan). Completed role assignment, weekly meeting schedule, setup the github repo and updated README each team members' info. We will wait for one extra day for some team members to setup the Android dev environment on their local machine before we submit our completed assignment deliverable.
+</br>
+| NetID          | Progress from last week         | Tasks for next week   |
+| ---------------| --------------------------------| ----------------------|
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+</br>
