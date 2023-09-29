@@ -11,9 +11,9 @@ The code for CS427 Android app.
 |Nina(Bing) Lin |binglin3       |ninablin     |Developer      |Cloud Computing,  Backend Development Python, Java, C++, MATLAB, SQL, JavaScript, HTML, CSS, AWS, Git, Tableau, React.js, Flask, Node.js, Kubernetes, Docker, Helm, Terraform, Redis, Linux, MySQL, PostgreSQL, MongoDB, DynamoDB               |
 |Christopher Lo |lo17           |lo17illinois |Developer      |Matlab, Python, C++               |
 |Cristian Ocampo-Padilla|co17   |cocampo314   |Developer      |Python, C, C++, Java, JavaScript, Git, SVN, Docker, Linux, PyTorch, NumPy, Pandas               |
-|Hadil Helaly   |hadil          |HadilHelay   |Manager        |Python, Julia  |
+|Hadil Helaly   |hadil          |HadilHelay   |Manager        |Python, Julia, Numpy, Pandas|
 |Kshitij Phulare|phulare2       |Kshitij6798  |Developer      |Python, C, PyTorch, NumPy, Pandas,MySQL               |
-|               |               |             |               |               |
+|Nithin Nathan  |ninatha3       |nithinnathan |Developer      |Python, C/C++, SQL, NumPy, Pandas, Git|
 |               |               |             |               |               |
 <br/>
 
