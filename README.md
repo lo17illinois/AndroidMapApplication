@@ -27,18 +27,18 @@ Meeting location (zoom link): https://illinois.zoom.us/j/8356015515?pwd=YlViWXRG
 </br>
 <b>Week 1</b>
 </br>
-Members present: binglin3, lo17, co17, hadil, phulare2
+Members present: binglin3, lo17, co17, hadil, phulare2, alya2
 </br>
-Meeting notes: Followed the milestone 1 task instructions and still waiting for two team members(Danxuan LIANG and Nithin Nathan). Completed role assignment, weekly meeting schedule, setup the github repo and updated README each team members' info. We will wait for one extra day for some team members to setup the Android dev environment on their local machine before we submit our completed assignment deliverable.
+Meeting notes: Followed the milestone 1 task instructions and still waiting for two team members(Danxuan LIANG and Nithin Nathan). Completed role assignment, weekly meeting schedule, setup the github repo and updated README each team members'info. We will wait for one extra day for some team members to setup the Android dev environment on their local machine before we submit our completed assignment deliverable.
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-| alya2          |                                 |                       |
-| binglin3       |                                 |                       |
-| lo17           |                                 |                       |
-| co17           | setup project environment       | Submit screenshot for milestone 1. Reserve time for next meeting. |
-| hadil          |                                 |                       |
-| phulare2       |                                 |                       |
+| alya2          | Setup project environment       |Create GitHub and invite all team members, instructors, and TA|
+| binglin3       | Setup project environment       |                       |
+| lo17           | Setup project environment       |                       |
+| co17           | Setup project environment       |Submit screenshot for milestone 1. Reserve time for next meeting. |
+| hadil          | Setup project environment       |Prepare project report, and create weekly event on Google Calendar for team weekly meeting|
+| phulare2       | Setup project environment       |Prepare weekly progress report|
 |                |                                 |                       |
 |                |                                 |                       |
 </br>
