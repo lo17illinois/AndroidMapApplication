@@ -34,11 +34,11 @@ Meeting notes: Followed the milestone 1 task instructions and still waiting for 
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
 | alya2          | Setup project environment       |Create GitHub and invite all team members, instructors, and TA|
-| binglin3       | Setup project environment       |                       |
+| binglin3       | Setup project environment       | Prepare weekly progress report|
 | lo17           | Setup project environment       |                       |
-| co17           | Setup project environment       |Submit screenshot for milestone 1. Reserve time for next meeting. |
+| co17           | Setup project environment       |Submit screenshot for milestone 1. Reserve time for next meetings. |
 | hadil          | Setup project environment       |Prepare project report, and create weekly event on Google Calendar for team weekly meeting|
-| phulare2       | Setup project environment       |Prepare weekly progress report|
+| phulare2       | Setup project environment       |                       |
 |                |                                 |                       |
 |                |                                 |                       |
 </br>
