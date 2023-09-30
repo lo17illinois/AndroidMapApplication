@@ -14,7 +14,7 @@ The code for CS427 Android app.
 |Hadil Helaly   |hadil          |HadilHelay   |Manager        |Python, Julia, Numpy, Pandas|
 |Kshitij Phulare|phulare2       |Kshitij6798  |Developer      |Python, C, PyTorch, NumPy, Pandas,MySQL               |
 |Nithin Nathan  |ninatha3       |nithinnathan |Developer      |Python, C/C++, SQL, NumPy, Pandas, Git|
-|               |               |             |               |               |
+|Danxuan LIANG  |danxuan3       |oocliooo     |Developer      |C++, C#, C, Python, NumPy, Pandas|
 <br/>
 
 <b>Weekly Progress Reports</b>
