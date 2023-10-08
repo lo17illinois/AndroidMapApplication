@@ -45,20 +45,20 @@ Meeting notes: Followed the milestone 1 task instructions and still waiting for 
 
 <b>Week 2</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: binglin3, hadil, alya2, danxuan3, ninatha3, co17
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: We came up with a list of informal requirements. We also completed one use case together and then assigned the rest of them. All use cases will hopefully be done by Monday and we can chat about the class diagram and component transition graph.
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+| hadil          |                                 | Use case 2, review class diagram and fundamentals of android app dev |
+| danxuan3       |                                 | Use case 3, review class diagram and fundamentals of android app dev |
+| alya2          |                                 | Use case 4, review class diagram and fundamentals of android app dev |
+| ninatha3       |                                 | Use case 5, review class diagram and fundamentals of android app dev |
+| co17           |                                 | Prepare weekly progress report, review class diagram and fundamentals of android app dev |
+| binglin3       |                                 | Review class diagram and fundamentals of android app dev             |
+| lo17           |                                 | Review class diagram and fundamentals of android app dev             |
+| phulare2       |                                 | Review class diagram and fundamentals of android app dev             |
 </br>
 
 
