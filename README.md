@@ -20,9 +20,9 @@ The code for CS427 Android app.
 <b>Weekly Progress Reports</b>
 </br> 
 </br>
-Meeting time: 09/27/2023 9pm - 10pm CST
+Meeting time: Fridays 9am - 10am CST
 </br> 
-Meeting location (zoom link): https://illinois.zoom.us/j/8356015515?pwd=YlViWXRGZTJlMk1wWFlLSjFlOHNQZz09
+Meeting location: [Zoom](https://illinois.zoom.us/j/81549361961?pwd=WllTUHNnbzAxczdSb1lBWGR5WlVuQT09)
 </br> 
 </br>
 <b>Week 1</b>
