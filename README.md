@@ -70,7 +70,7 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
+| binglin3               | Completed component transition graph                                 |                       |
 |                |                                 |                       |
 |                |                                 |                       |
 |                |                                 |                       |
