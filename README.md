@@ -72,12 +72,12 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 | ---------------| --------------------------------| ----------------------|
 | binglin3       | Prepare a draft for component transition graph| Read Milestone 3 and prepare for next team meeting|
 | hadil          | Participate in updating class diagram, component transition graph, prepare Milestone 2 report, update progress report|Read Milestone 3 and prepare for next team meeting|
-| danxuan3       | Participate in updating the class diagram and component transition graph| Read Milestone 3 and prepare for next team meeting                       |
-| alya2          | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for next team meeting                       |
-| ninatha3       | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for next team meeting                       |
-| co17           | Prepare different versions of the class diagram and component transition graph|Read Milestone 3 and prepare for next team meeting                      |
-| phulare2       | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for next team meeting           |
-| lo17           | Prepare different versions of the class diagram and component transition graph|Read Milestone 3 and prepare for next team meeting                       |
+| danxuan3       | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
+| alya2          | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
+| ninatha3       | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
+| co17           | Prepare different versions of the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
+| phulare2       | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
+| lo17           | Prepare different versions of the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
 </br>
 
 
