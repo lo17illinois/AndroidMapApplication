@@ -34,7 +34,7 @@ Meeting notes: Followed the milestone 1 task instructions and still waiting for 
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
 | alya2          | Setup project environment       |Create GitHub and invite all team members, instructors, and TA|
-| binglin3       | Setup project environment       | Prepare weekly progress report|
+| binglin3       | Setup project environment       |Prepare weekly progress report|
 | lo17           | Setup project environment       |                       |
 | co17           | Setup project environment       |Submit screenshot for milestone 1. Reserve time for next meetings. |
 | hadil          | Setup project environment       |Prepare project report, and create weekly event on Google Calendar for team weekly meeting|
@@ -70,14 +70,14 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-| binglin3       | Prepare a draft for component transition graph|                       |
-| hadil          | Participate in updating class diagram, component transition graph, prepare Milestone 2 report, update progress report|                       |
-| danxuan3       | Participate in updating the class diagram and component transition graph|                       |
-| alya2          | Participate in updating the class diagram and component transition graph|                       |
-| ninatha3       | Participate in updating the class diagram and component transition graph|                       |
-| co17           | Prepare different versions of the class diagram and component transition graph|                       |
-| phulare2       | Participate in updating the class diagram and component transition graph|            |
-| lo17           | Prepare different versions of the class diagram and component transition graph|                       |
+| binglin3       | Prepare a draft for component transition graph| Read Milestone 3 and prepare for next team meeting|
+| hadil          | Participate in updating class diagram, component transition graph, prepare Milestone 2 report, update progress report|Read Milestone 3 and prepare for next team meeting|
+| danxuan3       | Participate in updating the class diagram and component transition graph| Read Milestone 3 and prepare for next team meeting                       |
+| alya2          | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for next team meeting                       |
+| ninatha3       | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for next team meeting                       |
+| co17           | Prepare different versions of the class diagram and component transition graph|Read Milestone 3 and prepare for next team meeting                      |
+| phulare2       | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for next team meeting           |
+| lo17           | Prepare different versions of the class diagram and component transition graph|Read Milestone 3 and prepare for next team meeting                       |
 </br>
 
 
