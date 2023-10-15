@@ -51,10 +51,10 @@ Meeting notes: We came up with a list of informal requirements. We also complete
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-| hadil          |                                 | Use case 2, review class diagram and fundamentals of android app dev |
-| danxuan3       |                                 | Use case 3, review class diagram and fundamentals of android app dev |
-| alya2          |                                 | Use case 4, review class diagram and fundamentals of android app dev |
-| ninatha3       |                                 | Use case 5, review class diagram and fundamentals of android app dev |
+| hadil          |                                 | Use cases 2 and 3, review class diagram and fundamentals of android app dev |
+| danxuan3       |                                 | Use case 4, review class diagram and fundamentals of android app dev |
+| alya2          |                                 | Use case 5, review class diagram and fundamentals of android app dev |
+| ninatha3       |                                 | Use case 6, review class diagram and fundamentals of android app dev |
 | co17           |                                 | Prepare weekly progress report, review class diagram and fundamentals of android app dev |
 | binglin3       |                                 | Review class diagram and fundamentals of android app dev             |
 | lo17           |                                 | Review class diagram and fundamentals of android app dev             |
@@ -64,20 +64,20 @@ Meeting notes: We came up with a list of informal requirements. We also complete
 
 <b>Week 3</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: binglin3, hadil, alya2, danxuan3, ninatha3, co17, phulare2, lo17 
 </br>
 Meeting notes: Explain the overall team progress and a summary of discussion
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-| binglin3               | Completed component transition graph                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+| binglin3       | Prepare a draft for component transition graph|                       |
+| hadil          | Participate in updating class diagram, component transition graph, prepare Milestone 2, update progress report|                       |
+| danxuan3       | Participate in updating the class diagram and component transition graph|                       |
+| alya2          | Participate in updating the class diagram and component transition graph|                       |
+| ninatha3       | Participate in updating the class diagram and component transition graph|                       |
+| co17           | Prepare different versions of the class diagram and component transition graph|                       |
+| phulare2       | Participate in updating the class diagram and component transition graph|            |
+| lo17           | Prepare different versions of the class diagram and component transition graph|                       |
 </br>
 
 
