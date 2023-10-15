@@ -71,7 +71,7 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
 | binglin3       | Prepare a draft for component transition graph|                       |
-| hadil          | Participate in updating class diagram, component transition graph, prepare Milestone 2, update progress report|                       |
+| hadil          | Participate in updating class diagram, component transition graph, prepare Milestone 2 report, update progress report|                       |
 | danxuan3       | Participate in updating the class diagram and component transition graph|                       |
 | alya2          | Participate in updating the class diagram and component transition graph|                       |
 | ninatha3       | Participate in updating the class diagram and component transition graph|                       |
