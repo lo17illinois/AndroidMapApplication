@@ -13,7 +13,7 @@ The code for CS427 Android app.
 |Cristian Ocampo-Padilla|co17   |cocampo314   |Developer      |Python, C, C++, Java, JavaScript, Git, SVN, Docker, Linux, PyTorch, NumPy, Pandas               |
 |Hadil Helaly   |hadil          |HadilHelay   |Manager        |Python, Julia, Numpy, Pandas|
 |Kshitij Phulare|phulare2       |Kshitij6798  |Developer      |Python, C, PyTorch, NumPy, Pandas,MySQL               |
-|Nithin Nathan  |ninatha3       |nithinnathan |Developer      |Python, C/C++, SQL, NumPy, Pandas, Git|
+|Nithin Nathan  |nnatha3       |nithinnathan |Developer      |Python, C/C++, SQL, NumPy, Pandas, Git|
 |Danxuan LIANG  |danxuan3       |oocliooo     |Developer      |C++, C#, C, Python, NumPy, Pandas|
 <br/>
 
@@ -54,7 +54,7 @@ Meeting notes: We came up with a list of informal requirements. We also complete
 | hadil          |                                 | Use cases 2 and 3, review class diagram and fundamentals of android app dev |
 | danxuan3       |                                 | Use case 4, review class diagram and fundamentals of android app dev |
 | alya2          |                                 | Use case 5, review class diagram and fundamentals of android app dev |
-| ninatha3       |                                 | Use case 6, review class diagram and fundamentals of android app dev |
+| nnatha3       |                                 | Use case 6, review class diagram and fundamentals of android app dev |
 | co17           |                                 | Prepare weekly progress report, review class diagram and fundamentals of android app dev |
 | binglin3       |                                 | Review class diagram and fundamentals of android app dev             |
 | lo17           |                                 | Review class diagram and fundamentals of android app dev             |
@@ -74,7 +74,7 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 | hadil          | Participate in updating class diagram, component transition graph, prepare Milestone 2 report, update progress report|Read Milestone 3 and prepare for next team meeting|
 | danxuan3       | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
 | alya2          | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
-| ninatha3       | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
+| nnatha3       | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
 | co17           | Prepare different versions of the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
 | phulare2       | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
 | lo17           | Prepare different versions of the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
