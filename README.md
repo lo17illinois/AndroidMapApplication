@@ -54,7 +54,7 @@ Meeting notes: We came up with a list of informal requirements. We also complete
 | hadil          |                                 | Use cases 2 and 3, review class diagram and fundamentals of android app dev |
 | danxuan3       |                                 | Use case 4, review class diagram and fundamentals of android app dev |
 | alya2          |                                 | Use case 5, review class diagram and fundamentals of android app dev |
-| nnatha3       |                                 | Use case 6, review class diagram and fundamentals of android app dev |
+| nnatha3       |                                  | Use case 6, review class diagram and fundamentals of android app dev |
 | co17           |                                 | Prepare weekly progress report, review class diagram and fundamentals of android app dev |
 | binglin3       |                                 | Review class diagram and fundamentals of android app dev             |
 | lo17           |                                 | Review class diagram and fundamentals of android app dev             |
@@ -66,37 +66,37 @@ Meeting notes: We came up with a list of informal requirements. We also complete
 </br>
 Members present: binglin3, hadil, alya2, danxuan3, ninatha3, co17, phulare2, lo17 
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: discussed our progress from last week and worked on the remaining task in Milestone 2.  
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-| binglin3       | Participate in updating class diagram. Prepared a draft for component transition graph| Read Milestone 3 and prepare for next team meeting|
-| hadil          | Participate in updating class diagram, component transition graph, prepare Milestone 2 report, update progress report|Read Milestone 3 and prepare for next team meeting|
-| danxuan3       | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
-| alya2          | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
-| nnatha3       | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
-| co17           | Prepare different versions of the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
-| phulare2       | Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
+| binglin3       |Participate in updating class diagram. Prepared a draft for component transition graph| Read Milestone 3 and prepare for next team meeting|
+| hadil          |Participate in updating class diagram, component transition graph, prepare Milestone 2 report, update progress report|Read Milestone 3 and prepare for next team meeting|
+| danxuan3       |Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
+| alya2          |Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
+| nnatha3        |Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
+| co17           |Prepare different versions of the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
+| phulare2       |Participate in updating the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
 | lo17           | Prepare different versions of the class diagram and component transition graph|Read Milestone 3 and prepare for the next team meeting|
 </br>
 
 
 <b>Week 4</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: binglin3, hadil, alya2, ninatha3, co17, phulare2, lo17
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: We discussed tasks in Milestone 3 and split the work between team members.  
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|hadil           |Read Milestone 3                 |Lead team meeting, update weekly report|
+|binglin3        |Read Milestone 3                 |Work on Task 1 with Kshitij. Task 1 should be ready by Monday 10/23/23|
+|phulare2        |Read Milestone 3                 |Work on Task 1 with Bing. Task 1 should be ready by Monday 10/23/23|
+|nnatha3         |Read Milestone 3                 |Work on Task 2 with Cristian. Task 2 should be ready before our next meeting on Friday 10/27/23|
+|co17            |Read Milestone 3                 |Work on Task 2 with Nithan. Task 2 should be ready before our next meeting on Friday 10/27/23|
+|lo17            |Read Milestone 3                 |Work on Task 3 with Danxuan. Task 3 should be ready before our next meeting on Friday 10/27/23|
+|danxuan3        |Read Milestone 3                 |Work on Task 3 with Christopher. Task 3 should be ready before our next meeting on Friday 10/27/23|
+|alya2           |Read Milestone 3                 |Help developers with implementing their task if needed|
 </br>
 
 
