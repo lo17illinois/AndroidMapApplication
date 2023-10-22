@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         auth = FirebaseAuth.getInstance();
@@ -39,9 +40,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
             finish();
         }
+        else{
+            String username = user.getDisplayName();
+//            System.out.println(username);
+//            String appName = getString(R.string.app_name, username);
+//            System.out.println(appName);
+//
+//            // Set the text in the TextView
+//            textView.setText(appName);
+
+            if(username!=null){
+                setTitle("Team 10-" + username);
+
+                textView.setText("Welcome, " + username);
+            }
         else {
             textView.setText(user.getEmail());
-        }
+        }}
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

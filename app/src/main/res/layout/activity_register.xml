@@ -25,15 +25,16 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email"
-                android:hint="@string/email"
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/cardview_shadow_end_color"
+                android:hint="@string/username"
                 android:padding="8dp"
                 android:textColor="@color/black"
-                android:layout_width="match_parent"
-                android:background="@color/cardview_shadow_end_color"
-                android:textColorHighlight="@color/cardview_dark_background"
-                android:layout_height="50dp"/>
+                android:textColorHighlight="@color/cardview_dark_background" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -54,18 +55,7 @@
 <!--        Todo: create database to store user name-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/username"
-                android:hint="Name"
-                android:padding="8dp"
-                android:textColor="@color/black"
-                android:layout_width="match_parent"
-                android:background="@color/cardview_shadow_end_color"
-                android:textColorHighlight="@color/cardview_dark_background"
-                android:layout_marginTop="20dp"
-                android:layout_height="50dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"/>
 
         <ProgressBar
             android:id="@+id/progressBar"
