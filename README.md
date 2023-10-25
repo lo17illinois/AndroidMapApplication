@@ -45,7 +45,7 @@ Meeting notes: Followed the milestone 1 task instructions and still waiting for 
 
 <b>Week 2</b>
 </br>
-Members present: binglin3, hadil, alya2, danxuan3, ninatha3, co17
+Members present: binglin3, hadil, alya2, danxuan3, nnatha3, co17
 </br>
 Meeting notes: We came up with a list of informal requirements. We also completed one use case together and then assigned the rest of them. All use cases will hopefully be done by Monday and we can chat about the class diagram and component transition graph.
 </br>
@@ -64,7 +64,7 @@ Meeting notes: We came up with a list of informal requirements. We also complete
 
 <b>Week 3</b>
 </br>
-Members present: binglin3, hadil, alya2, danxuan3, ninatha3, co17, phulare2, lo17 
+Members present: binglin3, hadil, alya2, danxuan3, nnatha3, co17, phulare2, lo17 
 </br>
 Meeting notes: discussed our progress from last week and worked on the remaining task in Milestone 2.  
 </br>
@@ -83,7 +83,7 @@ Meeting notes: discussed our progress from last week and worked on the remaining
 
 <b>Week 4</b>
 </br>
-Members present: binglin3, hadil, alya2, ninatha3, co17, phulare2, lo17
+Members present: binglin3, hadil, alya2, nnatha3, co17, phulare2, lo17
 </br>
 Meeting notes: We discussed tasks in Milestone 3 and split the work between team members.  
 </br>
@@ -93,7 +93,7 @@ Meeting notes: We discussed tasks in Milestone 3 and split the work between team
 |binglin3        |Read Milestone 3                 |Work on Task 1 with Kshitij. Task 1 should be ready by Monday 10/23/23|
 |phulare2        |Read Milestone 3                 |Work on Task 1 with Bing. Task 1 should be ready by Monday 10/23/23|
 |nnatha3         |Read Milestone 3                 |Work on Task 2 with Cristian. Task 2 should be ready before our next meeting on Friday 10/27/23|
-|co17            |Read Milestone 3                 |Work on Task 2 with Nithan. Task 2 should be ready before our next meeting on Friday 10/27/23|
+|co17            |Read Milestone 3                 |Work on Task 2 with Nithin. Task 2 should be ready before our next meeting on Friday 10/27/23|
 |lo17            |Read Milestone 3                 |Work on Task 3 with Danxuan. Task 3 should be ready before our next meeting on Friday 10/27/23|
 |danxuan3        |Read Milestone 3                 |Work on Task 3 with Christopher. Task 3 should be ready before our next meeting on Friday 10/27/23|
 |alya2           |Read Milestone 3                 |Help developers with implementing their task if needed|
