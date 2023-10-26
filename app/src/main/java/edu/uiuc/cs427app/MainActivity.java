@@ -13,6 +13,11 @@ import edu.uiuc.cs427app.databinding.ActivityMainBinding;
 
 import android.widget.Button;
 
+//     Main Page
+//     * location selector, will use firestore
+//     * location adder
+//     * settings
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private AppBarConfiguration appBarConfiguration;
