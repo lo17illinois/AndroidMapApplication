@@ -109,8 +109,8 @@ Meeting notes: We discussed Milestone 3 tasks and agreed to meet tomorrow to fin
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
 |hadil           |Updated weekly report            |Lead team meeting, update weekly report|
-|binglin3        |Finished Task 1 with Kshitij     |Merge Task1 to main branch on GitHub|
-|phulare2        |Finished Task 1 with Bing        |Merge Task1 to main branch on GitHub|
+|binglin3        |Finished Task 1 with Kshitij     |Merge Task 1 to main branch on GitHub|
+|phulare2        |Finished Task 1 with Bing        |Merge Task 1 to main branch on GitHub|
 |nnatha3         |Worked on Task 2 with Cristian   |Continue working on Task 2 with Cristian|
 |co17            |Worked on Task 2 with Nithan     |Continue working on Task 2 with Nithan|
 |lo17            |Worked on Task 3 with Danxuan    |Continue working on Task 3 with Danxuan|
