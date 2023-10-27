@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "edu.uiuc.cs427app-mergeDebugResources-27:/layout/activity_main.xml",
+        "source": "edu.uiuc.cs427app-main-30:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/cocampopadilla/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-27:/layout/activity_main.xml",
+        "source": "/home/cocampopadilla/.gradle/daemon/8.0/edu.uiuc.cs427app-main-30:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/cocampopadilla/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-27:/layout/contact_spinner_row_nothing_selected.xml",
+        "source": "/home/cocampopadilla/.gradle/daemon/8.0/edu.uiuc.cs427app-main-30:/layout/contact_spinner_row_nothing_selected.xml"
+    },
+    {
+        "merged": "/home/cocampopadilla/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-27:/layout/activity_details.xml",
+        "source": "/home/cocampopadilla/.gradle/daemon/8.0/edu.uiuc.cs427app-main-30:/layout/activity_details.xml"
+    }
+]

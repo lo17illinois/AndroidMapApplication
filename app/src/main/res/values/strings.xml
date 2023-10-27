@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Team 10</string>
+    <string name="prompt">Select a city</string>
+    <string name="settings_button_description">Settings</string>
 </resources>

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "edu.uiuc.cs427app-mergeDebugResources-26:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "/home/cocampopadilla/.gradle/caches/transforms-3/13526bd9e242bd9037fe24ba7d011d9b/transformed/material-1.4.0/res/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "75",
+                        "endOffsets": "126"
+                    }
+                }
+            ]
+        }
+    ]
+}

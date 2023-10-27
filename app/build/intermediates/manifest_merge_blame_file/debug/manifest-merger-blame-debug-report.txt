@@ -1,0 +1,210 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="edu.uiuc.cs427app"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="29"
+9        android:targetSdkVersion="32" />
+10
+11    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+11-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:4:5-81
+11-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:4:22-78
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:5:5-79
+12-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:5:22-76
+13    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+13-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:6:5-85
+13-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:6:22-82
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:7:5-67
+14-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:7:22-64
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:26:5-79
+15-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:26:22-76
+16
+17    <application
+17-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:9:5-25:19
+18        android:allowBackup="true"
+18-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:10:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.5.0] /home/cocampopadilla/.gradle/caches/transforms-3/53a159c3510ee2b6647481dc82217523/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+20        android:debuggable="true"
+21        android:extractNativeLibs="false"
+22        android:icon="@mipmap/ic_launcher"
+22-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:11:9-43
+23        android:label="@string/app_name"
+23-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:12:9-41
+24        android:roundIcon="@mipmap/ic_launcher_round"
+24-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:13:9-54
+25        android:supportsRtl="true"
+25-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:14:9-35
+26        android:testOnly="true"
+27        android:theme="@style/Theme.MyFirstApp" >
+27-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:15:9-48
+28        <activity
+28-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:16:9-23:20
+29            android:name="edu.uiuc.cs427app.MainActivity"
+29-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:17:13-41
+30            android:exported="true" >
+30-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:18:13-36
+31            <intent-filter>
+31-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:19:13-22:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:20:17-69
+32-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:20:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:21:17-77
+34-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:21:27-74
+35            </intent-filter>
+36        </activity>
+37        <activity
+37-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:24:9-86
+38            android:name="edu.uiuc.cs427app.DetailsActivity"
+38-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:24:19-50
+39            android:exported="true" />
+39-->/home/cocampopadilla/CS427/CS-427-Team-10/app/src/main/AndroidManifest.xml:24:51-74
+40        <activity
+40-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:29:9-46:20
+41            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+41-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:30:13-80
+42            android:excludeFromRecents="true"
+42-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:31:13-46
+43            android:exported="true"
+43-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:32:13-36
+44            android:launchMode="singleTask"
+44-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:33:13-44
+45            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+45-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:34:13-72
+46            <intent-filter>
+46-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:35:13-45:29
+47                <action android:name="android.intent.action.VIEW" />
+47-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:36:17-69
+47-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:36:25-66
+48
+49                <category android:name="android.intent.category.DEFAULT" />
+49-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:38:17-76
+49-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:38:27-73
+50                <category android:name="android.intent.category.BROWSABLE" />
+50-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:39:17-78
+50-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:39:27-75
+51
+52                <data
+52-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:41:17-44:51
+53                    android:host="firebase.auth"
+53-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:42:21-49
+54                    android:path="/"
+54-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:43:21-37
+55                    android:scheme="genericidp" />
+55-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:44:21-48
+56            </intent-filter>
+57        </activity>
+58        <activity
+58-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:47:9-64:20
+59            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+59-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:48:13-79
+60            android:excludeFromRecents="true"
+60-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:49:13-46
+61            android:exported="true"
+61-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:50:13-36
+62            android:launchMode="singleTask"
+62-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:51:13-44
+63            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+63-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:52:13-72
+64            <intent-filter>
+64-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:53:13-63:29
+65                <action android:name="android.intent.action.VIEW" />
+65-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:36:17-69
+65-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:36:25-66
+66
+67                <category android:name="android.intent.category.DEFAULT" />
+67-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:38:17-76
+67-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:38:27-73
+68                <category android:name="android.intent.category.BROWSABLE" />
+68-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:39:17-78
+68-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:39:27-75
+69
+70                <data
+70-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:41:17-44:51
+71                    android:host="firebase.auth"
+71-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:42:21-49
+72                    android:path="/"
+72-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:43:21-37
+73                    android:scheme="recaptcha" />
+73-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:44:21-48
+74            </intent-filter>
+75        </activity>
+76
+77        <service
+77-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:66:9-72:19
+78            android:name="com.google.firebase.components.ComponentDiscoveryService"
+78-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:67:13-84
+79            android:directBootAware="true"
+79-->[com.google.firebase:firebase-common:20.4.2] /home/cocampopadilla/.gradle/caches/transforms-3/c0f7448b38389d5a7f640175898f694f/transformed/firebase-common-20.4.2/AndroidManifest.xml:32:13-43
+80            android:exported="false" >
+80-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:68:13-37
+81            <meta-data
+81-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:69:13-71:85
+82                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+82-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:70:17-109
+83                android:value="com.google.firebase.components.ComponentRegistrar" />
+83-->[com.google.firebase:firebase-auth:22.2.0] /home/cocampopadilla/.gradle/caches/transforms-3/1a38f2fa75abbfa9883514a4fe7f3dce/transformed/firebase-auth-22.2.0/AndroidManifest.xml:71:17-82
+84            <meta-data
+84-->[com.google.firebase:firebase-firestore:24.9.1] /home/cocampopadilla/.gradle/caches/transforms-3/d99cc432419477ead66de3ef7e9e9df2/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:17:13-19:85
+85                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+85-->[com.google.firebase:firebase-firestore:24.9.1] /home/cocampopadilla/.gradle/caches/transforms-3/d99cc432419477ead66de3ef7e9e9df2/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:18:17-122
+86                android:value="com.google.firebase.components.ComponentRegistrar" />
+86-->[com.google.firebase:firebase-firestore:24.9.1] /home/cocampopadilla/.gradle/caches/transforms-3/d99cc432419477ead66de3ef7e9e9df2/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:19:17-82
+87            <meta-data
+87-->[com.google.firebase:firebase-firestore:24.9.1] /home/cocampopadilla/.gradle/caches/transforms-3/d99cc432419477ead66de3ef7e9e9df2/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:20:13-22:85
+88                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+88-->[com.google.firebase:firebase-firestore:24.9.1] /home/cocampopadilla/.gradle/caches/transforms-3/d99cc432419477ead66de3ef7e9e9df2/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:21:17-111
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[com.google.firebase:firebase-firestore:24.9.1] /home/cocampopadilla/.gradle/caches/transforms-3/d99cc432419477ead66de3ef7e9e9df2/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:22:17-82
+90            <meta-data
+90-->[com.google.firebase:firebase-common-ktx:20.4.2] /home/cocampopadilla/.gradle/caches/transforms-3/aca4e2b48f13a8c7fda609721b2c5ef6/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:12:13-14:85
+91                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+91-->[com.google.firebase:firebase-common-ktx:20.4.2] /home/cocampopadilla/.gradle/caches/transforms-3/aca4e2b48f13a8c7fda609721b2c5ef6/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:13:17-116
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.firebase:firebase-common-ktx:20.4.2] /home/cocampopadilla/.gradle/caches/transforms-3/aca4e2b48f13a8c7fda609721b2c5ef6/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:14:17-82
+93            <meta-data
+93-->[com.google.firebase:firebase-common:20.4.2] /home/cocampopadilla/.gradle/caches/transforms-3/c0f7448b38389d5a7f640175898f694f/transformed/firebase-common-20.4.2/AndroidManifest.xml:35:13-37:85
+94                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+94-->[com.google.firebase:firebase-common:20.4.2] /home/cocampopadilla/.gradle/caches/transforms-3/c0f7448b38389d5a7f640175898f694f/transformed/firebase-common-20.4.2/AndroidManifest.xml:36:17-109
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[com.google.firebase:firebase-common:20.4.2] /home/cocampopadilla/.gradle/caches/transforms-3/c0f7448b38389d5a7f640175898f694f/transformed/firebase-common-20.4.2/AndroidManifest.xml:37:17-82
+96        </service>
+97
+98        <provider
+98-->[com.google.firebase:firebase-common:20.4.2] /home/cocampopadilla/.gradle/caches/transforms-3/c0f7448b38389d5a7f640175898f694f/transformed/firebase-common-20.4.2/AndroidManifest.xml:23:9-28:39
+99            android:name="com.google.firebase.provider.FirebaseInitProvider"
+99-->[com.google.firebase:firebase-common:20.4.2] /home/cocampopadilla/.gradle/caches/transforms-3/c0f7448b38389d5a7f640175898f694f/transformed/firebase-common-20.4.2/AndroidManifest.xml:24:13-77
+100            android:authorities="edu.uiuc.cs427app.firebaseinitprovider"
+100-->[com.google.firebase:firebase-common:20.4.2] /home/cocampopadilla/.gradle/caches/transforms-3/c0f7448b38389d5a7f640175898f694f/transformed/firebase-common-20.4.2/AndroidManifest.xml:25:13-72
+101            android:directBootAware="true"
+101-->[com.google.firebase:firebase-common:20.4.2] /home/cocampopadilla/.gradle/caches/transforms-3/c0f7448b38389d5a7f640175898f694f/transformed/firebase-common-20.4.2/AndroidManifest.xml:26:13-43
+102            android:exported="false"
+102-->[com.google.firebase:firebase-common:20.4.2] /home/cocampopadilla/.gradle/caches/transforms-3/c0f7448b38389d5a7f640175898f694f/transformed/firebase-common-20.4.2/AndroidManifest.xml:27:13-37
+103            android:initOrder="100" />
+103-->[com.google.firebase:firebase-common:20.4.2] /home/cocampopadilla/.gradle/caches/transforms-3/c0f7448b38389d5a7f640175898f694f/transformed/firebase-common-20.4.2/AndroidManifest.xml:28:13-36
+104
+105        <activity
+105-->[com.google.android.gms:play-services-base:18.0.1] /home/cocampopadilla/.gradle/caches/transforms-3/70f1f972dc7c899f78e95bcfacc7d98b/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+106            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+106-->[com.google.android.gms:play-services-base:18.0.1] /home/cocampopadilla/.gradle/caches/transforms-3/70f1f972dc7c899f78e95bcfacc7d98b/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+107            android:exported="false"
+107-->[com.google.android.gms:play-services-base:18.0.1] /home/cocampopadilla/.gradle/caches/transforms-3/70f1f972dc7c899f78e95bcfacc7d98b/transformed/play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+108            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+108-->[com.google.android.gms:play-services-base:18.0.1] /home/cocampopadilla/.gradle/caches/transforms-3/70f1f972dc7c899f78e95bcfacc7d98b/transformed/play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+109
+110        <meta-data
+110-->[com.google.android.gms:play-services-basement:18.1.0] /home/cocampopadilla/.gradle/caches/transforms-3/37883a13386b15d490a1a9b30ca7bc9d/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+111            android:name="com.google.android.gms.version"
+111-->[com.google.android.gms:play-services-basement:18.1.0] /home/cocampopadilla/.gradle/caches/transforms-3/37883a13386b15d490a1a9b30ca7bc9d/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+112            android:value="@integer/google_play_services_version" />
+112-->[com.google.android.gms:play-services-basement:18.1.0] /home/cocampopadilla/.gradle/caches/transforms-3/37883a13386b15d490a1a9b30ca7bc9d/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+113    </application>
+114
+115</manifest>
