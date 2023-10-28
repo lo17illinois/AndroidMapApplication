@@ -1,6 +1,7 @@
 <resources>
     <string name="prompt">Select a city</string>
     <string name="settings_button_description">Settings</string>
+    <string name="remove_button_description">Remove</string>
     <string name="app_name">Team 10 %s</string>
     <string name="login">Login</string>
     <string name="username">username</string>
