@@ -82,8 +82,8 @@
 
 <!--        Todo: recover password-->
         <TextView
-            android:id="@+id/changeTheme"
-            android:text="Set theme preference"
+            android:id="@+id/recoverPassword"
+            android:text="Recover password"
             android:textSize="14dp"
             android:textAlignment="center"
             android:padding="8dp"

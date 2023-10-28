@@ -125,7 +125,6 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     ProgressBar progressBar;
     TextView textView;
-    TextView selectTheme;
 
     @Override
     public void onStart() {
@@ -150,17 +149,6 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
         textView = findViewById(R.id.registerNow);
-        selectTheme = findViewById(R.id.changeTheme);
-
-//        link task3 theme selection activity here
-//        selectTheme.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,8 +158,6 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override

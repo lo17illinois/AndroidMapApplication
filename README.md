@@ -8,7 +8,7 @@ The code for CS427 Android app.
 | Name          | NetID         | GitHub ID   | Role          | Experience    |
 | ------------- | ------------- | ------------| ------------- | ------------- |
 |Aly Abouzaid   |alya2          |AlyAbou      |Tech Lead      | AWS Cloud Dev |            
-|Nina(Bing) Lin |binglin3       |nnablin     |Developer      | Python, SQL, AWS, Git, Kubernetes|
+|Nina(Bing) Lin |binglin3       |ninablin     |Developer      | Python, SQL, AWS, Git, Kubernetes|
 |Christopher Lo |lo17           |lo17illinois |Developer      |Matlab, Python, C++               |
 |Cristian Ocampo-Padilla|co17   |cocampo314   |Developer      |Python, C, C++, Java, JavaScript, Git, SVN, Docker, Linux, PyTorch, NumPy, Pandas               |
 |Hadil Helaly   |hadil          |HadilHelay   |Manager        |Python, Julia, Numpy, Pandas|
@@ -96,26 +96,26 @@ Meeting notes: We discussed tasks in Milestone 3 and split the work between team
 |co17            |Read Milestone 3                 |Work on Task 2 with Nithin. Task 2 should be ready before our next meeting on Friday 10/27/23|
 |lo17            |Read Milestone 3                 |Work on Task 3 with Danxuan. Task 3 should be ready before our next meeting on Friday 10/27/23|
 |danxuan3        |Read Milestone 3                 |Work on Task 3 with Christopher. Task 3 should be ready before our next meeting on Friday 10/27/23|
-|alya2           |Read Milestone 3                 |Help developers with implementing their tasks if needed|
+|alya2           |Read Milestone 3                 |Help developers with implementing their task if needed|
 </br>
 
 
 <b>Week 5</b>
 </br>
-Members present: binglin3, hadil, alya2, danxuan3, nnatha3, co17, phulare2, lo17
+Members present: List the NetID of the people who attended the meeting
 </br>
-Meeting notes: We discussed Milestone 3 tasks and agreed to meet tomorrow to finalize and check all tasks together. 
+Meeting notes: Explain the overall team progress and a summary of discussion
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|hadil           |Updated weekly report            |Lead team meeting, update weekly report|
-|binglin3        |Finished Task 1 with Kshitij     |Merge Task 1 to main branch on GitHub|
-|phulare2        |Finished Task 1 with Bing        |Merge Task 1 to main branch on GitHub|
-|nnatha3         |Worked on Task 2 with Cristian   |Continue working on Task 2 with Cristian|
-|co17            |Worked on Task 2 with Nithan     |Continue working on Task 2 with Nithan|
-|lo17            |Worked on Task 3 with Danxuan    |Continue working on Task 3 with Danxuan|
-|danxuan3        |Worked on Task 3 with Christopher|Continue working on Task 3 with Christopher|
-|alya2           |Helped developers with implementing their task |Help developers with implementing their tasks if needed|
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
+|                |                                 |                       |
 </br>
 
 
