@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -29,23 +30,40 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button buttonRemoveLocation;
 
   @NonNull
+  public final LinearLayout linearLayout;
+
+  @NonNull
+  public final Button logout;
+
+  @NonNull
   public final ImageButton settingsButton;
 
   @NonNull
   public final Spinner spinner;
 
   @NonNull
+  public final TextView textView15;
+
+  @NonNull
   public final TextView textView3;
 
+  @NonNull
+  public final TextView userDetails;
+
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonAddLocation,
-      @NonNull Button buttonRemoveLocation, @NonNull ImageButton settingsButton,
-      @NonNull Spinner spinner, @NonNull TextView textView3) {
+      @NonNull Button buttonRemoveLocation, @NonNull LinearLayout linearLayout,
+      @NonNull Button logout, @NonNull ImageButton settingsButton, @NonNull Spinner spinner,
+      @NonNull TextView textView15, @NonNull TextView textView3, @NonNull TextView userDetails) {
     this.rootView = rootView;
     this.buttonAddLocation = buttonAddLocation;
     this.buttonRemoveLocation = buttonRemoveLocation;
+    this.linearLayout = linearLayout;
+    this.logout = logout;
     this.settingsButton = settingsButton;
     this.spinner = spinner;
+    this.textView15 = textView15;
     this.textView3 = textView3;
+    this.userDetails = userDetails;
   }
 
   @Override
@@ -87,6 +105,18 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.linearLayout;
+      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.logout;
+      Button logout = ViewBindings.findChildViewById(rootView, id);
+      if (logout == null) {
+        break missingId;
+      }
+
       id = R.id.settingsButton;
       ImageButton settingsButton = ViewBindings.findChildViewById(rootView, id);
       if (settingsButton == null) {
@@ -99,14 +129,27 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView15;
+      TextView textView15 = ViewBindings.findChildViewById(rootView, id);
+      if (textView15 == null) {
+        break missingId;
+      }
+
       id = R.id.textView3;
       TextView textView3 = ViewBindings.findChildViewById(rootView, id);
       if (textView3 == null) {
         break missingId;
       }
 
+      id = R.id.user_details;
+      TextView userDetails = ViewBindings.findChildViewById(rootView, id);
+      if (userDetails == null) {
+        break missingId;
+      }
+
       return new ActivityMainBinding((ConstraintLayout) rootView, buttonAddLocation,
-          buttonRemoveLocation, settingsButton, spinner, textView3);
+          buttonRemoveLocation, linearLayout, logout, settingsButton, spinner, textView15,
+          textView3, userDetails);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

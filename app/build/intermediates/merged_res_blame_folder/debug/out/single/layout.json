@@ -1,18 +1,30 @@
 [
     {
-        "merged": "edu.uiuc.cs427app-mergeDebugResources-27:/layout/activity_main.xml",
-        "source": "edu.uiuc.cs427app-main-30:/layout/activity_main.xml"
+        "merged": "edu.uiuc.cs427app-mergeDebugResources-4:/layout/list_item_place.xml",
+        "source": "edu.uiuc.cs427app-main-7:/layout/list_item_place.xml"
     },
     {
-        "merged": "/home/cocampopadilla/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-27:/layout/activity_main.xml",
-        "source": "/home/cocampopadilla/.gradle/daemon/8.0/edu.uiuc.cs427app-main-30:/layout/activity_main.xml"
+        "merged": "edu.uiuc.cs427app-mergeDebugResources-4:/layout/activity_main.xml",
+        "source": "edu.uiuc.cs427app-main-7:/layout/activity_main.xml"
     },
     {
-        "merged": "/home/cocampopadilla/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-27:/layout/contact_spinner_row_nothing_selected.xml",
-        "source": "/home/cocampopadilla/.gradle/daemon/8.0/edu.uiuc.cs427app-main-30:/layout/contact_spinner_row_nothing_selected.xml"
+        "merged": "edu.uiuc.cs427app-mergeDebugResources-4:/layout/activity_register.xml",
+        "source": "edu.uiuc.cs427app-main-7:/layout/activity_register.xml"
     },
     {
-        "merged": "/home/cocampopadilla/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-27:/layout/activity_details.xml",
-        "source": "/home/cocampopadilla/.gradle/daemon/8.0/edu.uiuc.cs427app-main-30:/layout/activity_details.xml"
+        "merged": "edu.uiuc.cs427app-mergeDebugResources-4:/layout/activity_search.xml",
+        "source": "edu.uiuc.cs427app-main-7:/layout/activity_search.xml"
+    },
+    {
+        "merged": "edu.uiuc.cs427app-mergeDebugResources-4:/layout/activity_login.xml",
+        "source": "edu.uiuc.cs427app-main-7:/layout/activity_login.xml"
+    },
+    {
+        "merged": "edu.uiuc.cs427app-mergeDebugResources-4:/layout/contact_spinner_row_nothing_selected.xml",
+        "source": "edu.uiuc.cs427app-main-7:/layout/contact_spinner_row_nothing_selected.xml"
+    },
+    {
+        "merged": "edu.uiuc.cs427app-mergeDebugResources-4:/layout/activity_details.xml",
+        "source": "edu.uiuc.cs427app-main-7:/layout/activity_details.xml"
     }
 ]

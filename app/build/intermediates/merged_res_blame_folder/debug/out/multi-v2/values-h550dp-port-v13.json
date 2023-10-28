@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "edu.uiuc.cs427app-mergeDebugResources-26:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+            "outputFile": "edu.uiuc.cs427app-mergeDebugResources-3:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/home/cocampopadilla/.gradle/caches/transforms-3/13526bd9e242bd9037fe24ba7d011d9b/transformed/material-1.4.0/res/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+                    "source": "/private/var/root/.gradle/caches/transforms-3/1acf1ebc76c6dc4edb760c89bc03190f/transformed/material-1.4.0/res/values-h550dp-port-v13/values-h550dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

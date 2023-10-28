@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "edu.uiuc.cs427app-mergeDebugResources-26:/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "edu.uiuc.cs427app-mergeDebugResources-3:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/cocampopadilla/.gradle/caches/transforms-3/d07f588182ea70a327323817ebfe37cc/transformed/appcompat-1.3.0/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "/private/var/root/.gradle/caches/transforms-3/f6abee8ec613da67d97aa7bebc147dc2/transformed/appcompat-1.3.0/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

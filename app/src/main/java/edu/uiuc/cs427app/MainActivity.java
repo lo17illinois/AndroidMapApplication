@@ -197,11 +197,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("city", "Champaign");
                 startActivity(intent);
                 break;
-//            case R.id.buttonChampaign:
-//                intent = new Intent(this, DetailsActivity.class);
-//                intent.putExtra("city", "Champaign");
-//                startActivity(intent);
-//                break;
+            //case R.id.buttonChampaign:
+                //intent = new Intent(this, SearchActivity.class);
+                //intent.putExtra("city", "Champaign");
+                //startActivity(intent);
+                //break;
 //            case R.id.buttonChicago:
 //                intent = new Intent(this, DetailsActivity.class);
 //                intent.putExtra("city", "Chicago");
@@ -212,9 +212,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                intent.putExtra("city", "Los Angeles");
 //                startActivity(intent);
 //                break;
-//            case R.id.buttonAddLocation:
-//                // Implement this action to add a new location to the list of locations
-//                break;
+            case R.id.buttonAddLocation:
+                // Implement this action to add a new location to the list of locations
+                intent = new Intent(this, SearchActivity.class);
+                intent.putExtra("city", "Add a Location");
+                startActivity(intent);
+                break;
         }
     }
 }

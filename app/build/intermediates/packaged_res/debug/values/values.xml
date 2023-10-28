@@ -7,15 +7,25 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
-    <string name="app_name">Team 10</string>
+    <string name="app_name">Team 10 %s</string>
+    <string name="click_to_login">Click to login</string>
+    <string name="click_to_register">Click to register</string>
     <string name="gcm_defaultSenderId" translatable="false">624044888329</string>
     <string name="google_api_key" translatable="false">AIzaSyAt4V4o4SmjB8-OjoelHKYvt6G3o0eq9Yc</string>
     <string name="google_app_id" translatable="false">1:624044888329:android:a30599d52bbca31487c3d8</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAt4V4o4SmjB8-OjoelHKYvt6G3o0eq9Yc</string>
     <string name="google_storage_bucket" translatable="false">cs-427-team-10.appspot.com</string>
+    <string name="googlemap_key">AIzaSyDCZDe3ZOc08EYo5FlHjL2nX0SRA-ExyDM</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="password">Password</string>
     <string name="project_id" translatable="false">cs-427-team-10</string>
     <string name="prompt">Select a city</string>
+    <string name="register">Register</string>
+    <string name="search_for_city">Search For City</string>
+    <string name="search_for_place">search for place</string>
     <string name="settings_button_description">Settings</string>
+    <string name="username">username</string>
     <style name="Theme.MyFirstApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>

@@ -9,4 +9,7 @@
     <string name="click_to_login">Click to login</string>
     <string name="click_to_register">Click to register</string>
     <string name="logout">Logout</string>
+    <string name="googlemap_key">AIzaSyDCZDe3ZOc08EYo5FlHjL2nX0SRA-ExyDM</string>
+    <string name="search_for_place">search for place</string>
+    <string name="search_for_city">Search For City</string>
 </resources>
