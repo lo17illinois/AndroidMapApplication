@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Spinner spinner = findViewById(R.id.spinner);
 
         // Initialize Firestore data
-        db.collection("users")
+        db.collection("registeredUsers")
                 .document(username)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View view) {
                 if (position != 0) {
-                    DocumentReference docRef = db.collection("users").document(username);
+                    DocumentReference docRef = db.collection("registeredUsers").document(username);
                     fav_cities.remove(position-1);
                     docRef.update("locations", fav_cities)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
