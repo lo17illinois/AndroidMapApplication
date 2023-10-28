@@ -15,16 +15,21 @@ import androidx.navigation.ui.AppBarConfiguration;
 
 import edu.uiuc.cs427app.databinding.ActivityMainBinding;
 
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.GeoPoint;
 import android.util.Log;
@@ -58,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    int position = 0;
+    List<GeoPoint> fav_cities  = new ArrayList<GeoPoint>();
     FirebaseAuth auth;
     Button button;
     TextView textView;
@@ -97,7 +104,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -114,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (task.isSuccessful()) {
                             DocumentSnapshot document = task.getResult();
                             if (document.exists()) {
-                                List<GeoPoint> fav_cities = (List<GeoPoint>) document.get("locations");
+                                fav_cities = (List<GeoPoint>) document.get("locations");
                                 String fav_theme = document.getString("theme");
 
                                 // Firestore data received
@@ -129,9 +135,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 spinner.setAdapter(adapter);
                                 spinner.setPrompt("Select a city");
 
-                                Button buttonNew = findViewById(R.id.buttonAddLocation);
-//                                buttonNew.setOnClickListener(this);
-
                                 // Continue initializing other UI components here
                             } else {
                                 Log.d(TAG, "No such document");
@@ -141,6 +144,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }
                     }
                 });
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                position = spinner.getSelectedItemPosition();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                position = 0;
+            }
+        });
+        Button buttonLocationAdd = findViewById(R.id.buttonAddLocation);
+        Button buttonLoationRemove = findViewById(R.id.buttonRemoveLocation);
+        buttonLoationRemove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (position != 0) {
+                    DocumentReference docRef = db.collection("users").document(username);
+                    fav_cities.remove(position-1);
+                    docRef.update("locations", fav_cities)
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    // Document was successfully deleted
+                                    finish();
+                                    startActivity(getIntent());
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    // Handle any errors that occurred during the deletion
+                                }
+                            });
+                }
+            }
+        });
     }
 
     private ArrayAdapter<String> createSpinnerAdapter(List<GeoPoint> geoPoints) throws ExecutionException, InterruptedException {
@@ -193,6 +233,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent;
         switch (view.getId()) {
             case R.id.spinner:
+                intent = new Intent(this, DetailsActivity.class);
+                intent.putExtra("city", "Champaign");
+                startActivity(intent);
+                break;
+            case R.id.buttonRemoveLocation:
                 intent = new Intent(this, DetailsActivity.class);
                 intent.putExtra("city", "Champaign");
                 startActivity(intent);
