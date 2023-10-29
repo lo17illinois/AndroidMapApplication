@@ -53,31 +53,16 @@
         <activity
             android:name="edu.uiuc.cs427app.MainActivity"
             android:exported="true" >
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name="edu.uiuc.cs427app.DetailsActivity"
             android:exported="true" />
         <activity
-            android:name="edu.uiuc.cs427app.SearchActivity"
+            android:name="edu.uiuc.cs427app.ChooseUIDisplayActivity"
             android:exported="true" />
         <activity
-            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
-            android:exported="false"
-            android:label="@string/places_autocomplete_label"
-            android:theme="@style/PlacesAutocompleteOverlay"
-            android:windowSoftInputMode="adjustResize" >
-        </activity> <!-- Needs to be explicitly declared on P+ -->
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" />
-
+            android:name="edu.uiuc.cs427app.SearchActivity"
+            android:exported="true" />
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
@@ -136,17 +121,28 @@
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
 
+        <activity
+            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
+            android:exported="false"
+            android:label="@string/places_autocomplete_label"
+            android:theme="@style/PlacesAutocompleteOverlay"
+            android:windowSoftInputMode="adjustResize" >
+        </activity> <!-- Needs to be explicitly declared on P+ -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
             android:authorities="edu.uiuc.cs427app.firebaseinitprovider"
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
-
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <meta-data
             android:name="com.google.android.gms.version"

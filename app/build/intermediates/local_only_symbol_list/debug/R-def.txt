@@ -1,6 +1,16 @@
 R_DEF: Internal format may change without notice
 local
+color beige_200
+color beige_500
+color beige_700
 color black
+color blue_200
+color blue_500
+color brown_200
+color brown_500
+color orange_200
+color orange_500
+color orange_700
 color purple_200
 color purple_500
 color purple_700
@@ -10,6 +20,13 @@ color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_settings
+drawable ic_trash
+id button
+id button2
+id button3
+id button4
+id button5
+id button6
 id buttonAddLocation
 id buttonRemoveLocation
 id button_login
@@ -29,6 +46,7 @@ id recoverPassword
 id registerNow
 id settingsButton
 id spinner
+id textView
 id textView15
 id textView3
 id txtLongAddress
@@ -36,6 +54,7 @@ id txtShortAddress
 id user_details
 id username
 id welcomeText
+layout activity_chooseui
 layout activity_details
 layout activity_login
 layout activity_main
@@ -60,8 +79,12 @@ string password
 string project_id
 string prompt
 string register
+string remove_button_description
 string search_for_city
 string search_for_place
 string settings_button_description
 string username
 style Theme.MyFirstApp
+style Theme.MyFirstApp2
+style Theme.MyFirstApp3
+style Theme.MyFirstApp4

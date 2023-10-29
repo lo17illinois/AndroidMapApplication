@@ -29,6 +29,11 @@ import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.GeoPoint;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.Collections;
 
@@ -122,7 +127,12 @@ public class ChooseUIDisplayActivity extends AppCompatActivity implements View.O
                             backButton.setEnabled(true);
                         });
                     } else {
-                        userDocRef.set(Collections.singletonMap("userTheme", theme)).addOnCompleteListener(createTask -> {
+                        ArrayList<GeoPoint> geoPoints = new ArrayList<>();
+                        Map<String, Object> data = new HashMap<>();
+                        data.put("userTheme", theme);
+                        data.put("locations", geoPoints);
+                        userDocRef.set(data).addOnCompleteListener(createTask -> {
+//                        userDocRef.set(Collections.singletonMap("userTheme", theme)).addOnCompleteListener(createTask -> {
                             if (createTask.isSuccessful()) {
                                 Log.d("Firestore", "User theme successfully set.");
                             } else {

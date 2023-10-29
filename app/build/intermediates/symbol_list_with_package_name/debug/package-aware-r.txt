@@ -1059,13 +1059,20 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color beige_200
+color beige_500
+color beige_700
 color black
+color blue_200
+color blue_500
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color brown_200
+color brown_500
 color browser_actions_bg_grey
 color browser_actions_divider_color
 color browser_actions_text_color
@@ -1223,6 +1230,9 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color orange_200
+color orange_500
+color orange_700
 color place_autocomplete_prediction_primary_text
 color place_autocomplete_prediction_primary_text_highlight
 color place_autocomplete_prediction_secondary_text
@@ -2193,6 +2203,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_settings
+drawable ic_trash
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2335,6 +2346,12 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id button
+id button2
+id button3
+id button4
+id button5
+id button6
 id buttonAddLocation
 id buttonPanel
 id buttonRemoveLocation
@@ -2682,6 +2699,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id textView15
 id textView3
 id text_input_end_icon
@@ -2800,6 +2818,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_chooseui
 layout activity_details
 layout activity_login
 layout activity_main
@@ -3061,6 +3080,7 @@ string places_try_again
 string project_id
 string prompt
 string register
+string remove_button_description
 string search_for_city
 string search_for_place
 string search_menu_title
@@ -3539,6 +3559,9 @@ style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
 style Theme_MyFirstApp
+style Theme_MyFirstApp2
+style Theme_MyFirstApp3
+style Theme_MyFirstApp4
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark

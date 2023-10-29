@@ -24,10 +24,13 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button button6;
+
+  @NonNull
   public final Button buttonAddLocation;
 
   @NonNull
-  public final Button buttonRemoveLocation;
+  public final ImageButton buttonRemoveLocation;
 
   @NonNull
   public final LinearLayout linearLayout;
@@ -50,11 +53,13 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final TextView userDetails;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonAddLocation,
-      @NonNull Button buttonRemoveLocation, @NonNull LinearLayout linearLayout,
-      @NonNull Button logout, @NonNull ImageButton settingsButton, @NonNull Spinner spinner,
-      @NonNull TextView textView15, @NonNull TextView textView3, @NonNull TextView userDetails) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button button6,
+      @NonNull Button buttonAddLocation, @NonNull ImageButton buttonRemoveLocation,
+      @NonNull LinearLayout linearLayout, @NonNull Button logout,
+      @NonNull ImageButton settingsButton, @NonNull Spinner spinner, @NonNull TextView textView15,
+      @NonNull TextView textView3, @NonNull TextView userDetails) {
     this.rootView = rootView;
+    this.button6 = button6;
     this.buttonAddLocation = buttonAddLocation;
     this.buttonRemoveLocation = buttonRemoveLocation;
     this.linearLayout = linearLayout;
@@ -93,6 +98,12 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.button6;
+      Button button6 = ViewBindings.findChildViewById(rootView, id);
+      if (button6 == null) {
+        break missingId;
+      }
+
       id = R.id.buttonAddLocation;
       Button buttonAddLocation = ViewBindings.findChildViewById(rootView, id);
       if (buttonAddLocation == null) {
@@ -100,7 +111,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       id = R.id.buttonRemoveLocation;
-      Button buttonRemoveLocation = ViewBindings.findChildViewById(rootView, id);
+      ImageButton buttonRemoveLocation = ViewBindings.findChildViewById(rootView, id);
       if (buttonRemoveLocation == null) {
         break missingId;
       }
@@ -147,7 +158,7 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, buttonAddLocation,
+      return new ActivityMainBinding((ConstraintLayout) rootView, button6, buttonAddLocation,
           buttonRemoveLocation, linearLayout, logout, settingsButton, spinner, textView15,
           textView3, userDetails);
     }
