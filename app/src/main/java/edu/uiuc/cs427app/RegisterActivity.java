@@ -221,7 +221,7 @@ public class RegisterActivity extends AppCompatActivity {
                                                     if (task.isSuccessful()) {
                                                         // Display name updated successfully
                                                         // Proceed to the main activity
-                                                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                                        Intent intent = new Intent(getApplicationContext(), ChooseUIDisplayActivity.class);
                                                         startActivity(intent);
                                                         finish();
                                                     } else {
