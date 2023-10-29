@@ -102,9 +102,9 @@ Meeting notes: We discussed tasks in Milestone 3 and split the work between team
 
 <b>Week 5</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: binglin3, hadil, alya2, danxuan3, nnatha3, co17, phulare2, lo17
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: Discussing Milestone 3 progress so far and finalizing all task for submission.  
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
