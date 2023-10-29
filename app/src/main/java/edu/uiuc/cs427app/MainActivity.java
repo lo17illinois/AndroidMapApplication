@@ -18,6 +18,7 @@ import edu.uiuc.cs427app.databinding.ActivityMainBinding;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -107,26 +108,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-
+        // drop down for locations
         Spinner spinner = findViewById(R.id.spinner);
 
         // Initialize Firestore data
         db.collection("registeredUsers")
                 .document(username)
                 .get()
-                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {                     // when we get the data back we want to load up the locations list
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         if (task.isSuccessful()) {
                             DocumentSnapshot document = task.getResult();
                             if (document.exists()) {
-                                fav_cities = (List<GeoPoint>) document.get("locations");
+                                fav_cities = (List<GeoPoint>) document.get("locations");                 // there should always be a location array, even if it's empty
                                 String fav_theme = document.getString("theme");
 
                                 // Firestore data received
                                 ArrayAdapter<String> adapter = null;
                                 try {
-                                    adapter = createSpinnerAdapter(fav_cities);
+                                    adapter = createSpinnerAdapter(fav_cities);                          // turning the geopoint array into strings to be used in spinner
                                 } catch (ExecutionException e) {
                                     throw new RuntimeException(e);
                                 } catch (InterruptedException e) {
@@ -144,7 +145,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }
                     }
                 });
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {                        // whenever an item is selected, we want to update the position so we know what item is selected
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 position = spinner.getSelectedItemPosition();
@@ -155,20 +157,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 position = 0;
             }
         });
+        
         Button buttonLocationAdd = findViewById(R.id.buttonAddLocation);
-        Button buttonLoationRemove = findViewById(R.id.buttonRemoveLocation);
+
+        ImageButton buttonLoationRemove = findViewById(R.id.buttonRemoveLocation);                                // trash button uses position to determine which location to remove
         buttonLoationRemove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (position != 0) {
-                    DocumentReference docRef = db.collection("registeredUsers").document(username);
+                if (position != 0) {                                                                              // if it was on position 0 then we don't want to do anything since that is the prompt location
+                    DocumentReference docRef = db.collection("registeredUsers").document(username);               // otherwise, we update the firestore to show that the location was removed
                     fav_cities.remove(position-1);
                     docRef.update("locations", fav_cities)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
                                     // Document was successfully deleted
-                                    finish();
+                                    finish();                                                                      // then refresh the activity to show that the location was updated
                                     startActivity(getIntent());
                                 }
                             })
@@ -183,14 +187,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
-    private ArrayAdapter<String> createSpinnerAdapter(List<GeoPoint> geoPoints) throws ExecutionException, InterruptedException {
-        // Convert the GeoPoint data to a format suitable for the spinner
+    private ArrayAdapter<String> createSpinnerAdapter(List<GeoPoint> geoPoints) throws ExecutionException, InterruptedException { // Convert the GeoPoint data to a format suitable for the spinner
         List<String> cityNames = new ArrayList<>();
         cityNames.add("Select a City");
         for (GeoPoint geoPoint : geoPoints) {
             String city = "";
             try {
-                city = formatGeoPoint(this, geoPoint); // Implement formatGeoPoint to format GeoPoint as a string
+                city = formatGeoPoint(this, geoPoint);                                                                             // formats the geopoint into a string of a city if found otherwise Invalid.
             } catch (ExecutionException e) {
                 throw new RuntimeException(e);
             } catch (InterruptedException e) {
@@ -202,16 +205,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 cityNames.add("Invalid");
         }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, cityNames);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, cityNames);                    // put the citynames into adapter for the spinner to use
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         return adapter;
     }
 
-    private String formatGeoPoint(Context context, GeoPoint geoPoint) throws ExecutionException, InterruptedException {
+    private String formatGeoPoint(Context context, GeoPoint geoPoint) throws ExecutionException, InterruptedException {                // use a geocoder to convert geopoints back into cities
         double latitude = geoPoint.getLatitude();
         double longitude = geoPoint.getLongitude();
-        String apiKey = "AIzaSyAWShdyunaphUFSlfem19ZvYPJalS8td1A";
         Geocoder geocoder = new Geocoder(context, Locale.getDefault());
         String cityName = null;
 
@@ -232,31 +234,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
-            case R.id.spinner:
-                intent = new Intent(this, DetailsActivity.class);
-                intent.putExtra("city", "Champaign");
-                startActivity(intent);
-                break;
-            case R.id.buttonRemoveLocation:
-                intent = new Intent(this, DetailsActivity.class);
-                intent.putExtra("city", "Champaign");
-                startActivity(intent);
-                break;
-            //case R.id.buttonChampaign:
-                //intent = new Intent(this, SearchActivity.class);
-                //intent.putExtra("city", "Champaign");
-                //startActivity(intent);
-                //break;
-//            case R.id.buttonChicago:
-//                intent = new Intent(this, DetailsActivity.class);
-//                intent.putExtra("city", "Chicago");
-//                startActivity(intent);
-//                break;
-//            case R.id.buttonLA:
-//                intent = new Intent(this, DetailsActivity.class);
-//                intent.putExtra("city", "Los Angeles");
-//                startActivity(intent);
-//                break;
             case R.id.buttonAddLocation:
                 // Implement this action to add a new location to the list of locations
                 intent = new Intent(this, SearchActivity.class);
