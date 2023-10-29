@@ -1,0 +1,13 @@
+/**
+ * Automatically generated file. DO NOT MODIFY
+ */
+package edu.uiuc.cs427app;
+
+public final class BuildConfig {
+  public static final boolean DEBUG = Boolean.parseBoolean("true");
+  public static final String APPLICATION_ID = "edu.uiuc.cs427app";
+  public static final String BUILD_TYPE = "debug";
+  public static final int VERSION_CODE = 1;
+  public static final String VERSION_NAME = "1.0";
+  public static final String PLACES_API_KEY = "AIzaSyDCZDe3ZOc08EYo5FlHjL2nX0SRA-ExyDM";
+}
