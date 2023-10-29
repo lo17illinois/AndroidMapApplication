@@ -134,5 +134,17 @@
             android:layout_height="wrap_content"
             android:text="Add a location" />
 
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change UI Theme" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TestButton" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
