@@ -15,11 +15,18 @@
         android:singleLine="true"
         android:imeOptions="actionSearch"
         android:hint="@string/search_for_city" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"/>
+        android:layout_height="499dp"
+        android:layout_gravity="center" />
     <ListView
         android:id="@+id/listPlaces"
         android:layout_width="match_parent"

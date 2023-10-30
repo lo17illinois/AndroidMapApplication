@@ -2352,6 +2352,7 @@ id button3
 id button4
 id button5
 id button6
+id button9
 id buttonAddLocation
 id buttonPanel
 id buttonRemoveLocation
@@ -2541,6 +2542,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nameInput
 id nav_controller_view_tag
 id nav_host_fragment_container
 id navigation_bar_item_icon_view
@@ -2701,6 +2703,7 @@ id textStart
 id textTop
 id textView
 id textView15
+id textView2
 id textView3
 id text_input_end_icon
 id text_input_error_icon
@@ -2818,6 +2821,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_addcity
 layout activity_chooseui
 layout activity_details
 layout activity_login

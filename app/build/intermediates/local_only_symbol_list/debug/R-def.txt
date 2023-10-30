@@ -27,6 +27,7 @@ id button3
 id button4
 id button5
 id button6
+id button9
 id buttonAddLocation
 id buttonRemoveLocation
 id button_login
@@ -40,6 +41,7 @@ id loginNow
 id loginText
 id logout
 id mapButton
+id nameInput
 id password
 id progressBar
 id recoverPassword
@@ -48,12 +50,14 @@ id settingsButton
 id spinner
 id textView
 id textView15
+id textView2
 id textView3
 id txtLongAddress
 id txtShortAddress
 id user_details
 id username
 id welcomeText
+layout activity_addcity
 layout activity_chooseui
 layout activity_details
 layout activity_login

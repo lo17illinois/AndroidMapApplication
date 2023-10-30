@@ -4,6 +4,7 @@ package edu.uiuc.cs427app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -22,6 +23,9 @@ public final class ActivitySearchBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final Button button9;
+
+  @NonNull
   public final EditText editSearch;
 
   @NonNull
@@ -30,9 +34,11 @@ public final class ActivitySearchBinding implements ViewBinding {
   @NonNull
   public final ProgressBar progressBar;
 
-  private ActivitySearchBinding(@NonNull LinearLayout rootView, @NonNull EditText editSearch,
-      @NonNull ListView listPlaces, @NonNull ProgressBar progressBar) {
+  private ActivitySearchBinding(@NonNull LinearLayout rootView, @NonNull Button button9,
+      @NonNull EditText editSearch, @NonNull ListView listPlaces,
+      @NonNull ProgressBar progressBar) {
     this.rootView = rootView;
+    this.button9 = button9;
     this.editSearch = editSearch;
     this.listPlaces = listPlaces;
     this.progressBar = progressBar;
@@ -65,6 +71,12 @@ public final class ActivitySearchBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.button9;
+      Button button9 = ViewBindings.findChildViewById(rootView, id);
+      if (button9 == null) {
+        break missingId;
+      }
+
       id = R.id.editSearch;
       EditText editSearch = ViewBindings.findChildViewById(rootView, id);
       if (editSearch == null) {
@@ -83,7 +95,7 @@ public final class ActivitySearchBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySearchBinding((LinearLayout) rootView, editSearch, listPlaces,
+      return new ActivitySearchBinding((LinearLayout) rootView, button9, editSearch, listPlaces,
           progressBar);
     }
     String missingId = rootView.getResources().getResourceName(id);
