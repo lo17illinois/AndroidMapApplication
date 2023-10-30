@@ -68,13 +68,16 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     FirebaseAuth auth;
     FirebaseUser user;
     String userTheme;
+    //Starts on activity start up
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.i("MainActivity","onCreate");
         super.onCreate(savedInstanceState);
+        //loads in firebase user in preparation to read in user theme
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
         if (user != null) {
+            //reads in the user profile, specifically the saved user theme
             DocumentReference userDocRef = db.collection("users").document(user.getUid());
             userDocRef.get().addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
@@ -84,36 +87,45 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
                         userTheme = document.getString("userTheme");
                         if (userTheme != null) {
                             Log.i("RetrievedUser",userTheme);
+                            //set the UI theme to the user theme saved onto the users profile
                             changeTheme.setTheme(this, userTheme);
+                            //The ActionBar and StatusBar doesn't change with the setTheme functionality so they are manually changed below
                             Window window1 = getWindow();
                             switch (userTheme) {
                                 case "theme1":
+                                    //Intializes the colors for theme1 for ActionBar + StatusBar
                                     themeColor1 = Color.parseColor("#FF6200EE");
                                     themeColor2 = Color.parseColor("#FF3700B3");
                                     break;
                                 case "theme2":
+                                    //Intializes the colors for theme2 for ActionBar + StatusBar
                                     themeColor1 = Color.parseColor("#FF903A");
                                     themeColor2 = Color.parseColor("#FFBB86");
                                     break;
                                 case "theme3":
+                                    //Intializes the colors for theme3 for ActionBar + StatusBar
                                     themeColor1 = Color.parseColor("#b46b41");
                                     themeColor2 = Color.parseColor("#cd9575");
                                     break;
                                 case "theme4":
+                                    //Intializes the colors for theme4 for ActionBar + StatusBar
                                     themeColor1 = Color.parseColor("#3aa9ff");
                                     themeColor2 = Color.parseColor("#86caff");
                                     break;
                                 default:
+                                    //Intializes the colors for default=theme1 for ActionBar + StatusBar
                                     themeColor1 = Color.parseColor("#FF6200EE");
                                     themeColor2 = Color.parseColor("#FF3700B3");
                                     break;
                             }
+                            //Manually changes the ActionBar + StatusBar colors
                             getSupportActionBar().setBackgroundDrawable(new ColorDrawable(themeColor1));
                             window1.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
                             window1.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
                             window1.setStatusBarColor(themeColor2);
                             getSupportActionBar().setDisplayShowTitleEnabled(false);
                             getSupportActionBar().setDisplayShowTitleEnabled(true);
+                            //Initialize MainActivity-specific UI features
                             setupUI();
                         } else {
                         }
@@ -130,6 +142,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         setupUI();
     }
 
+    //Initialize SearchActivity-specific UI features
     private void setupUI() {
         setContentView(R.layout.activity_search);
         String apiKey = BuildConfig.PLACES_API_KEY;
@@ -137,6 +150,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         if (!Places.isInitialized()) {
             Places.initialize(this, apiKey);
         }
+        //Create button to go back to MainActivity
         Button backButton = findViewById(R.id.button9);
         backButton.setOnClickListener(this);
 
@@ -294,9 +308,11 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
         }
 
     }
+    //onClick function that deals with button presses
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
+            //Create button functionality to takes the user back to MainActivity
             case R.id.button9:
                 intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
