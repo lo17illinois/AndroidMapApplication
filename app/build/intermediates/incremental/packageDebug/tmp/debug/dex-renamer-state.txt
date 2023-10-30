@@ -1,10 +1,10 @@
-#Sun Oct 29 22:18:33 CDT 2023
-base.0=/Users/nithinnathan/code/cs427/CS-427-Team-10/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/Users/nithinnathan/code/cs427/CS-427-Team-10/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.2=/Users/nithinnathan/code/cs427/CS-427-Team-10/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex
-base.3=/Users/nithinnathan/code/cs427/CS-427-Team-10/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
-base.4=/Users/nithinnathan/code/cs427/CS-427-Team-10/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
-base.5=/Users/nithinnathan/code/cs427/CS-427-Team-10/app/build/intermediates/dex/debug/mergeExtDexDebug/classes3.dex
+#Sun Oct 29 22:51:28 CDT 2023
+base.0=/home/cocampopadilla/CS427/CS-427-Team-10/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/home/cocampopadilla/CS427/CS-427-Team-10/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/home/cocampopadilla/CS427/CS-427-Team-10/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex
+base.3=/home/cocampopadilla/CS427/CS-427-Team-10/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
+base.4=/home/cocampopadilla/CS427/CS-427-Team-10/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+base.5=/home/cocampopadilla/CS427/CS-427-Team-10/app/build/intermediates/dex/debug/mergeExtDexDebug/classes3.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=13/classes.dex

@@ -47,7 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
     int position = 0;
-    List<GeoPoint> fav_cities  = new ArrayList<GeoPoint>();
+    //    List<GeoPoint> fav_cities  = new ArrayList<GeoPoint>();
+    List<String> fav_cities = new ArrayList<>(); // this is temporary long term goal is to have it geopoint
     FirebaseAuth auth;
     FirebaseUser user;
     String userTheme;
@@ -177,7 +178,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (task.isSuccessful()) {
                             DocumentSnapshot document = task.getResult();
                             if (document.exists()) {
-                                fav_cities = (List<GeoPoint>) document.get("locations");                 // there should always be a location array, even if it's empty
+                                //fav_cities = (List<GeoPoint>) document.get("locations");                 // there should always be a location array, even if it's empty
+                                fav_cities = (List<String>) document.get("locations");
                                 String fav_theme = document.getString("userTheme");
 
                                 // Firestore data received
@@ -248,22 +250,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
-    private ArrayAdapter<String> createSpinnerAdapter(List<GeoPoint> geoPoints) throws ExecutionException, InterruptedException { // Convert the GeoPoint data to a format suitable for the spinner
+    //    private ArrayAdapter<String> createSpinnerAdapter(List<GeoPoint> geoPoints) throws ExecutionException, InterruptedException { // Convert the GeoPoint data to a format suitable for the spinner
+    private ArrayAdapter<String> createSpinnerAdapter(List<String> cities) throws ExecutionException, InterruptedException {
         List<String> cityNames = new ArrayList<>();
         cityNames.add("Select a City");
-        for (GeoPoint geoPoint : geoPoints) {
-            String city = "";
-            try {
-                city = formatGeoPoint(this, geoPoint);                                                                             // formats the geopoint into a string of a city if found otherwise Invalid.
-            } catch (ExecutionException e) {
-                throw new RuntimeException(e);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-            if (city != null)
-                cityNames.add(city);
-            else
-                cityNames.add("Invalid");
+        //        for (GeoPoint geoPoint : geoPoints) {
+//            String city = "";
+//            try {
+//                city = formatGeoPoint(this, geoPoint);                                                                             // formats the geopoint into a string of a city if found otherwise Invalid.
+//            } catch (ExecutionException e) {
+//                throw new RuntimeException(e);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+//            if (city != null)
+//                cityNames.add(city);
+//            else
+//                cityNames.add("Invalid");
+//        }
+        for (String city : cities) {
+            cityNames.add(city);
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, cityNames);                    // put the citynames into adapter for the spinner to use

@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FieldValue;
 
 public class SearchActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -119,9 +120,35 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onClick(View view) {
                 name = nameInput.getText().toString();
+                addLocationFirestore(name); // fill grab the user input and add it onto the locations database
                 showToast(name);
             }
         });
+    }
+
+    private void addLocationFirestore(String city) {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            DocumentReference userDocRef = db.collection("users").document(user.getUid());
+            userDocRef.get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        userDocRef.update("locations", FieldValue.arrayUnion(city)).addOnCompleteListener(updateTask -> {
+                            if (updateTask.isSuccessful()) {
+                                Log.d("Firestore", "User locations successfully updated.");
+                            } else {
+                                Log.e("Firestore", "Error updating user locations", updateTask.getException());
+                            }
+                        });
+                    }
+                } else {
+                    Log.e("Firestore", "Error getting user document", task.getException());
+                }
+            });
+        } else {
+            Log.e("Firestore", "User not logged in");
+        }
     }
 
     // currently just shows inputted text, should be mapped to add city to user's info in firestore
