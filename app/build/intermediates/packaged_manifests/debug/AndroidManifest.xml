@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.uiuc.cs427app"
     android:versionCode="1"
-    android:versionName="1.0" >
-
+    android:versionName="1.0" > <!-- <meta-data -->
+    <!-- android:name="com.google.android.geo.API_KEY" -->
+    <!-- android:value="${APIKEY}" /> -->
     <uses-sdk
         android:minSdkVersion="29"
         android:targetSdkVersion="32" />
@@ -37,6 +38,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.MaterialComponents.Light" >
         <activity
+            android:name="edu.uiuc.cs427app.ShowMapActivity"
+            android:exported="false" />
+        <activity
             android:name="edu.uiuc.cs427app.RegisterActivity"
             android:exported="false"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
@@ -52,8 +56,7 @@
         </activity>
         <activity
             android:name="edu.uiuc.cs427app.MainActivity"
-            android:exported="true" >
-        </activity>
+            android:exported="true" />
         <activity
             android:name="edu.uiuc.cs427app.DetailsActivity"
             android:exported="true" />
@@ -63,6 +66,17 @@
         <activity
             android:name="edu.uiuc.cs427app.SearchActivity"
             android:exported="true" />
+        <activity
+            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
+            android:exported="false"
+            android:label="@string/places_autocomplete_label"
+            android:theme="@style/PlacesAutocompleteOverlay"
+            android:windowSoftInputMode="adjustResize" >
+        </activity> <!-- Needs to be explicitly declared on P+ -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
@@ -120,17 +134,6 @@
                 android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
-
-        <activity
-            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
-            android:exported="false"
-            android:label="@string/places_autocomplete_label"
-            android:theme="@style/PlacesAutocompleteOverlay"
-            android:windowSoftInputMode="adjustResize" >
-        </activity> <!-- Needs to be explicitly declared on P+ -->
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" />
 
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"

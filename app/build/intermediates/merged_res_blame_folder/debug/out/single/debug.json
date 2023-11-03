@@ -1,102 +1,110 @@
 [
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/layout_list_item_place.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/layout/list_item_place.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/layout_activity_details.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/layout/activity_details.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_activity_search.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_search.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "edu.uiuc.cs427app-main-33:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_activity_show_map.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_show_map.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/layout_activity_chooseui.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/layout/activity_chooseui.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_list_item_place.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/list_item_place.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "edu.uiuc.cs427app-main-33:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_activity_details.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_details.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/layout_activity_login.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/layout/activity_login.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/drawable_ic_settings.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/drawable/ic_settings.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_activity_register.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_register.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "edu.uiuc.cs427app-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/layout_contact_spinner_row_nothing_selected.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/layout/contact_spinner_row_nothing_selected.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/layout_activity_register.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/layout/activity_register.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_activity_addcity.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_addcity.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "edu.uiuc.cs427app-main-33:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "edu.uiuc.cs427app-main-33:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "edu.uiuc.cs427app-main-33:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_contact_spinner_row_nothing_selected.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/contact_spinner_row_nothing_selected.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/drawable_ic_trash.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/drawable/ic_trash.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/layout_activity_addcity.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/layout/activity_addcity.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "edu.uiuc.cs427app-main-33:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "edu.uiuc.cs427app-merged_res-31:/layout_activity_show_map.xml.flat",
+        "source": "edu.uiuc.cs427app-main-33:/layout/activity_show_map.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/drawable_ic_settings.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/drawable/ic_settings.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/layout_activity_main.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/layout/activity_main.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "edu.uiuc.cs427app-main-33:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_main.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "edu.uiuc.cs427app-main-33:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_activity_login.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_login.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/drawable_ic_launcher_background.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/drawable/ic_launcher_background.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "edu.uiuc.cs427app-main-33:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/layout_activity_search.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/layout/activity_search.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_activity_chooseui.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_chooseui.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-merged_res-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "edu.uiuc.cs427app-main-33:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/drawable_ic_trash.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/drawable/ic_trash.xml"
+    },
+    {
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/mipmap-xhdpi/ic_launcher.webp"
     }
 ]

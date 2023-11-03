@@ -30,6 +30,8 @@ id button6
 id button9
 id buttonAddLocation
 id buttonRemoveLocation
+id buttonViewMap
+id buttonViewWeather
 id button_login
 id button_register
 id cityInfo
@@ -37,6 +39,8 @@ id details
 id editSearch
 id linearLayout
 id listPlaces
+id locationGeoCoordinate
+id location_name
 id loginNow
 id loginText
 id logout
@@ -64,6 +68,7 @@ layout activity_login
 layout activity_main
 layout activity_register
 layout activity_search
+layout activity_show_map
 layout contact_spinner_row_nothing_selected
 layout list_item_place
 mipmap ic_launcher

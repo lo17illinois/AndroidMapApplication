@@ -2356,6 +2356,8 @@ id button9
 id buttonAddLocation
 id buttonPanel
 id buttonRemoveLocation
+id buttonViewMap
+id buttonViewWeather
 id button_login
 id button_register
 id cache_measures
@@ -2484,6 +2486,8 @@ id linearLayout
 id listMode
 id listPlaces
 id list_item
+id locationGeoCoordinate
+id location_name
 id loginNow
 id loginText
 id logout
@@ -2828,6 +2832,7 @@ layout activity_login
 layout activity_main
 layout activity_register
 layout activity_search
+layout activity_show_map
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout contact_spinner_row_nothing_selected

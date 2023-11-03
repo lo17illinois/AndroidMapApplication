@@ -1,38 +1,46 @@
 [
     {
-        "merged": "edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_login.xml",
-        "source": "edu.uiuc.cs427app-main-33:/layout/activity_login.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_main.xml",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_main.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_addcity.xml",
-        "source": "edu.uiuc.cs427app-main-33:/layout/activity_addcity.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_register.xml",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_register.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_chooseui.xml",
-        "source": "edu.uiuc.cs427app-main-33:/layout/activity_chooseui.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_login.xml",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_login.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_details.xml",
-        "source": "edu.uiuc.cs427app-main-33:/layout/activity_details.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_chooseui.xml",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_chooseui.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_register.xml",
-        "source": "edu.uiuc.cs427app-main-33:/layout/activity_register.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_show_map.xml",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_show_map.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-mergeDebugResources-30:/layout/contact_spinner_row_nothing_selected.xml",
-        "source": "edu.uiuc.cs427app-main-33:/layout/contact_spinner_row_nothing_selected.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_details.xml",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_details.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_main.xml",
-        "source": "edu.uiuc.cs427app-main-33:/layout/activity_main.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-30:/layout/list_item_place.xml",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/list_item_place.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-mergeDebugResources-30:/layout/list_item_place.xml",
-        "source": "edu.uiuc.cs427app-main-33:/layout/list_item_place.xml"
+        "merged": "edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_show_map.xml",
+        "source": "edu.uiuc.cs427app-main-33:/layout/activity_show_map.xml"
     },
     {
-        "merged": "edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_search.xml",
-        "source": "edu.uiuc.cs427app-main-33:/layout/activity_search.xml"
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_search.xml",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_search.xml"
+    },
+    {
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-30:/layout/activity_addcity.xml",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_addcity.xml"
+    },
+    {
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-mergeDebugResources-30:/layout/contact_spinner_row_nothing_selected.xml",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/contact_spinner_row_nothing_selected.xml"
     }
 ]

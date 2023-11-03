@@ -249,6 +249,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
+
+        //Create button functionality to view map of selected city
+        Button buttonViewMap = findViewById(R.id.buttonViewMap);
+        buttonViewMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (position != 0){
+                    // Get the top element from the list
+                    String selectedCity = fav_cities.get(0);
+
+                    // Create an Intent to start the ViewLocationActivity
+                    Intent intent = new Intent(getApplicationContext(), ShowMapActivity.class);
+                    intent.putExtra("selected_city", selectedCity);
+                    startActivity(intent);
+                }
+            }
+        });
     }
     //    private ArrayAdapter<String> createSpinnerAdapter(List<GeoPoint> geoPoints) throws ExecutionException, InterruptedException { // Convert the GeoPoint data to a format suitable for the spinner
     private ArrayAdapter<String> createSpinnerAdapter(List<String> cities) throws ExecutionException, InterruptedException {

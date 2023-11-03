@@ -33,6 +33,12 @@ public final class ActivityMainBinding implements ViewBinding {
   public final ImageButton buttonRemoveLocation;
 
   @NonNull
+  public final Button buttonViewMap;
+
+  @NonNull
+  public final Button buttonViewWeather;
+
+  @NonNull
   public final LinearLayout linearLayout;
 
   @NonNull
@@ -55,6 +61,7 @@ public final class ActivityMainBinding implements ViewBinding {
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button button6,
       @NonNull Button buttonAddLocation, @NonNull ImageButton buttonRemoveLocation,
+      @NonNull Button buttonViewMap, @NonNull Button buttonViewWeather,
       @NonNull LinearLayout linearLayout, @NonNull Button logout,
       @NonNull ImageButton settingsButton, @NonNull Spinner spinner, @NonNull TextView textView15,
       @NonNull TextView textView3, @NonNull TextView userDetails) {
@@ -62,6 +69,8 @@ public final class ActivityMainBinding implements ViewBinding {
     this.button6 = button6;
     this.buttonAddLocation = buttonAddLocation;
     this.buttonRemoveLocation = buttonRemoveLocation;
+    this.buttonViewMap = buttonViewMap;
+    this.buttonViewWeather = buttonViewWeather;
     this.linearLayout = linearLayout;
     this.logout = logout;
     this.settingsButton = settingsButton;
@@ -116,6 +125,18 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.buttonViewMap;
+      Button buttonViewMap = ViewBindings.findChildViewById(rootView, id);
+      if (buttonViewMap == null) {
+        break missingId;
+      }
+
+      id = R.id.buttonViewWeather;
+      Button buttonViewWeather = ViewBindings.findChildViewById(rootView, id);
+      if (buttonViewWeather == null) {
+        break missingId;
+      }
+
       id = R.id.linearLayout;
       LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout == null) {
@@ -159,8 +180,8 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((ConstraintLayout) rootView, button6, buttonAddLocation,
-          buttonRemoveLocation, linearLayout, logout, settingsButton, spinner, textView15,
-          textView3, userDetails);
+          buttonRemoveLocation, buttonViewMap, buttonViewWeather, linearLayout, logout,
+          settingsButton, spinner, textView15, textView3, userDetails);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
