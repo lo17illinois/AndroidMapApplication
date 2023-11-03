@@ -104,11 +104,11 @@ Meeting notes: We discussed tasks in Milestone 3 and split the work between team
 </br>
 Members present: binglin3, hadil, alya2, danxuan3, nnatha3, co17, phulare2, lo17
 </br>
-Meeting notes: Discussing Milestone 3 progress so far and finalizing all task for submission.  
+Meeting notes: Discussing Milestone 3 progress so far and finalizing all tasks for submission.  
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|hadil           |Updated weekly report            |Lead team meeting, update weekly report|
+|hadil           |Updated weekly report            |Lead team meeting, update weekly report, record Milestone 3 video submission|
 |binglin3        |Finished Task 1 with Kshitij     |Merge Task1 to main branch on GitHub|
 |phulare2        |Finished Task 1 with Bing        |Merge Task1 to main branch on GitHub|
 |nnatha3         |Worked on Task 2 with Cristian   |Continue working on Task 2 with Cristian|
