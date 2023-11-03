@@ -121,20 +121,20 @@ Meeting notes: Discussing Milestone 3 progress so far and finalizing all task fo
 
 <b>Week 6</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: binglin3, hadil, alya2, danxuan3, nnatha3, co17, phulare2, lo17
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: Discussed what happened at Milestone 3 and how we can avoid it. We agreed that we would have a meeting on Tuesday from 9:00 to 10:00 p.m. to check our progress and keep our Friday meeting if needed. All tasks should be ready by Tuesday, November 7. 
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|hadil           |Read Milestone 4                 |Lead team meeting, update weekly report, send a calendar invite for Tuesday's meeting|
+|binglin3        |Read Milestone 4                 |Work on the "Map" feature on the app|
+|phulare2        |Read Milestone 4                 |Work on the "Weather" feature on the app|
+|nnatha3         |Read Milestone 4                 |Work on the "Weather" feature on the app|
+|co17            |Read Milestone 4                 |Work on the "Weather" feature on the app|
+|lo17            |Read Milestone 4                 |Work on the Map feature on the app|
+|danxuan3        |Read Milestone 4                 |Work on the "Weather" feature on the app|
+|alya2           |Read Milestone 4                 |Create an account on Google Cloud, get an API key, create git ignore file|
 </br>
 
 
