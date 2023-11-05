@@ -18,6 +18,12 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FieldValue;
+import android.location.Address;
+import android.location.Geocoder;
+import android.os.AsyncTask;
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 public class SearchActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -35,7 +41,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     //Starts on activity start up
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.i("MainActivity","onCreate");
+        Log.i("SearchActivity","onCreate");
         super.onCreate(savedInstanceState);
         //loads in firebase user in preparation to read in user theme
         auth = FirebaseAuth.getInstance();
@@ -109,13 +115,10 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     // initializes specific features
     private void setupUI() {
         setContentView(R.layout.activity_addcity);
-
         nameInput = (EditText) findViewById(R.id.nameInput);
         button = (Button) findViewById(R.id.button);
-
         backButton = (Button) findViewById(R.id.button9);
         backButton.setOnClickListener(this);
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -127,6 +130,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void addLocationFirestore(String city) {
+        Log.i("SearchActivity","addLocationFirestore");
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             DocumentReference userDocRef = db.collection("users").document(user.getUid());
@@ -134,13 +138,15 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
-                        userDocRef.update("locations", FieldValue.arrayUnion(city)).addOnCompleteListener(updateTask -> {
-                            if (updateTask.isSuccessful()) {
-                                Log.d("Firestore", "User locations successfully updated.");
-                            } else {
-                                Log.e("Firestore", "Error updating user locations", updateTask.getException());
-                            }
-                        });
+                        new GeocodeAsyncTask(city).execute();
+                        //userDocRef.update("locations", FieldValue.arrayUnion(city)).addOnCompleteListener(updateTask -> {
+                            //TODO: Update userDocRef with location coordinates
+                            //if (updateTask.isSuccessful()) {
+                            //    Log.d("Firestore", "User locations successfully updated.");
+                            //} else {
+                            //    Log.e("Firestore", "Error updating user locations", updateTask.getException());
+                            //}
+                        //});
                     }
                 } else {
                     Log.e("Firestore", "Error getting user document", task.getException());
@@ -150,6 +156,71 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
             Log.e("Firestore", "User not logged in");
         }
     }
+// AsyncTask to retrieve location coordinates using Geocoder
+private class GeocodeAsyncTask extends AsyncTask<Void, Void, List<Address>> {
+    private String cityName;
+
+    GeocodeAsyncTask(String cityName) {
+        this.cityName = cityName;
+    }
+
+    @Override
+    protected List<Address> doInBackground(Void... voids) {
+        Geocoder geocoder = new Geocoder(SearchActivity.this, Locale.getDefault());
+        List<Address> addresses = null;
+        try {
+            addresses = geocoder.getFromLocationName(cityName, 1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return addresses;
+    }
+
+    @Override
+    protected void onPostExecute(List<Address> addresses) {
+        if (addresses != null && addresses.size() > 0) {
+            Address address = addresses.get(0);
+            double latitude = address.getLatitude();
+            double longitude = address.getLongitude();
+            Log.i("SearchActivity", String.valueOf(latitude));
+            Log.i("SearchActivity", String.valueOf(longitude));
+            // Update userDocRef with location coordinates
+            DocumentReference userDocRef = db.collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            //userDocRef.update("locations", FieldValue.arrayUnion(city)).addOnCompleteListener(updateTask -> {
+            userDocRef.update("locations", FieldValue.arrayUnion(cityName))
+                    .addOnSuccessListener(aVoid -> {
+                        // Coordinates retrieved and user locations successfully updated
+                        Log.d("Firestore", "User locations successfully updated.");
+                    })
+                    .addOnFailureListener(e -> {
+                        // Error updating user locations
+                        Log.e("Firestore", "Error updating user locations", e);
+                    });
+            userDocRef.update("coordinateX", FieldValue.arrayUnion(latitude))
+                    .addOnSuccessListener(aVoid -> {
+                        // Coordinates retrieved and user locations successfully updated
+                        Log.d("Firestore", "User locations successfully updated.");
+                    })
+                    .addOnFailureListener(e -> {
+                        // Error updating user locations
+                        Log.e("Firestore", "Error updating user locations", e);
+                    });
+            userDocRef.update("coordinateY", FieldValue.arrayUnion(longitude))
+                    .addOnSuccessListener(aVoid -> {
+                        // Coordinates retrieved and user locations successfully updated
+                        Log.d("Firestore", "User locations successfully updated.");
+                    })
+                    .addOnFailureListener(e -> {
+                        // Error updating user locations
+                        Log.e("Firestore", "Error updating user locations", e);
+                    });
+        } else {
+            // City not found or Geocoder service unavailable
+            Log.e("Geocoder", "City not found or Geocoder service unavailable");
+        }
+    }
+}
+
 
     // currently just shows inputted text, should be mapped to add city to user's info in firestore
     private void showToast (String text) {

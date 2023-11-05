@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -19,11 +20,17 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class ShowMapActivity extends AppCompatActivity implements OnMapReadyCallback {
     GoogleMap gMap;
@@ -31,11 +38,15 @@ public class ShowMapActivity extends AppCompatActivity implements OnMapReadyCall
     FirebaseAuth auth;
     FirebaseUser user;
     String userTheme;
+    List<String> fav_cities = new ArrayList<>();
+    List <Double> X_coords = new ArrayList<>();
+    List <Double> Y_coords = new ArrayList<>();
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     private static int themeColor1;
     private static int themeColor2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i("ShowMapActivity","onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_map);
 
@@ -51,8 +62,16 @@ public class ShowMapActivity extends AppCompatActivity implements OnMapReadyCall
                     if (document.exists()) {
                         // Retrieve user theme from the document
                         userTheme = document.getString("userTheme");
+
+                        // ADDED: Retrieve user fav cities and coordinates
+                        fav_cities = (List<String>) document.get("locations");
+                        X_coords = (List<Double>) document.get("coordinateX");
+                        Y_coords = (List<Double>) document.get("coordinateX");
+                        //Log.i("fav_cities", fav_cities.toString());
+                        //Log.i("X_coords", X_coords.toString());
+                        //Log.i("Y_coords", Y_coords.toString());
                         if (userTheme != null) {
-                            Log.i("RetrievedUser",userTheme);
+                            Log.i("RetrievedUser", userTheme);
                             //set the UI theme to the user theme saved onto the users profile
                             changeTheme.setTheme(this, userTheme);
                             //The ActionBar and StatusBar doesn't change with the setTheme functionality so they are manually changed below
@@ -104,9 +123,16 @@ public class ShowMapActivity extends AppCompatActivity implements OnMapReadyCall
         } else {
             Log.e("Firestore", "User not logged in");
         }
+        setupUI();
+    }
+    private void setupUI() {
+
         //Retrieve the top city from the intent
         Intent intent = getIntent();
         String topCity = intent.getStringExtra("selected_city");
+        Double topCity_Xcoord = intent.getDoubleExtra("selected_city_XCoord", 0.0);
+        Double topCity_Ycoord = intent.getDoubleExtra("selected_city_YCoord", 0.0);
+
 
         //Display city name
         TextView cityNametTextView = findViewById(R.id.location_name);
@@ -115,17 +141,8 @@ public class ShowMapActivity extends AppCompatActivity implements OnMapReadyCall
         //Display latitude & longitude
         TextView cityCoordinatetextView = findViewById(R.id.locationGeoCoordinate);
 
-
-        //Get latitude and longitude of city using Geocoder, buggy
-//        Geocoder geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
-//        try {
-//            List<Address> addresses = geocoder.getFromLocationName(selectedCity, 3);
-//            Log.d("list", addresses.toString());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
         // set text to city coordinate
-//        cityCoordinatetextView.setText(topCity);
+        cityCoordinatetextView.setText(topCity_Xcoord + ", " + topCity_Ycoord);
 
 
 //        map = findViewById(R.id.google_map);
