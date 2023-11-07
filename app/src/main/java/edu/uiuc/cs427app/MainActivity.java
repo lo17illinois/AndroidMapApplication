@@ -289,43 +289,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     // Get the top element from the list
                     Log.i("MainActivity", "showmap button pressed2");
 
-
                     //String selectedCity = fav_cities.get(0);
                     String selectedCity = fav_cities.get(position-1);
-
 
                     Log.i("selectedCity",selectedCity);
                     Double selectedCity_XCoord = 0.0;
                     Double selectedCity_YCoord = 0.0;
                     if (X_coords.size() > 0) {
                         Log.i("X_coords", "if triggered");
-
-
-
                         //selectedCity_XCoord = X_coords.get(0);
                         selectedCity_XCoord = X_coords.get(position-1);
-
-
-
                         Log.i("selectedCity_XCoord", String.valueOf(selectedCity_XCoord));
                     } else {
                         Log.i("X_coord", "else triggered");
                     }
                     if (Y_coords.size() > 0) {
                         Log.i("Y_coords", "if triggered");
-
-
-
                         //selectedCity_YCoord = Y_coords.get(0);
                         selectedCity_YCoord = Y_coords.get(position-1);
-
-
                         Log.i("selectedCity_YCoord", String.valueOf(selectedCity_YCoord));
                     } else {
                         Log.i("Y_coord", "else triggered");
                     }
-
-
                     // Create an Intent to start the ViewLocationActivity
                     Intent intent = new Intent(getApplicationContext(), ShowMapActivity.class);
                     intent.putExtra("selected_city", selectedCity);

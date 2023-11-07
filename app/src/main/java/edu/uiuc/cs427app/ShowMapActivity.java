@@ -133,7 +133,6 @@ public class ShowMapActivity extends AppCompatActivity implements OnMapReadyCall
         Double topCity_Xcoord = intent.getDoubleExtra("selected_city_XCoord", 0.0);
         Double topCity_Ycoord = intent.getDoubleExtra("selected_city_YCoord", 0.0);
 
-
         //Display city name
         TextView cityNametTextView = findViewById(R.id.location_name);
         cityNametTextView.setText(topCity);
@@ -144,19 +143,25 @@ public class ShowMapActivity extends AppCompatActivity implements OnMapReadyCall
         // set text to city coordinate
         cityCoordinatetextView.setText(topCity_Xcoord + ", " + topCity_Ycoord);
 
-
-//        map = findViewById(R.id.google_map);
-//        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-//        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
-//        mapFragment.getMapAsync(this);
+        map = findViewById(R.id.google_map);
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
+        mapFragment.getMapAsync(this);
     }
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         this.gMap = googleMap;
+
+        //Retrieve the top city from the intent
+        Intent intent = getIntent();
+        Double topCity_Xcoord = intent.getDoubleExtra("selected_city_XCoord", 0.0);
+        Double topCity_Ycoord = intent.getDoubleExtra("selected_city_YCoord", 0.0);
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        gMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        gMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng selectedCity = new LatLng(topCity_Xcoord, topCity_Ycoord);
+        gMap.addMarker(new MarkerOptions().position(selectedCity).title("Selected City"));
+        gMap.moveCamera(CameraUpdateFactory.newLatLng(selectedCity));
+        // Enable zoom controls
+        gMap.getUiSettings().setZoomControlsEnabled(true);
     }
 }

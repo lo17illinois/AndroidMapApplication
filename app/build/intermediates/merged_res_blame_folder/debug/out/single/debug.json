@@ -4,12 +4,12 @@
         "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_activity_search.xml.flat",
-        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_search.xml"
-    },
-    {
         "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_activity_show_map.xml.flat",
         "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_show_map.xml"
+    },
+    {
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_activity_search.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_search.xml"
     },
     {
         "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_list_item_place.xml.flat",
@@ -24,12 +24,12 @@
         "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/drawable/ic_settings.xml"
     },
     {
-        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_activity_register.xml.flat",
-        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_register.xml"
-    },
-    {
         "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/layout_activity_register.xml.flat",
+        "source": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-main-33:/layout/activity_register.xml"
     },
     {
         "merged": "/Users/ninalin/.gradle/daemon/8.0/edu.uiuc.cs427app-merged_res-31:/mipmap-xxxhdpi_ic_launcher.webp.flat",

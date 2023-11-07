@@ -2448,6 +2448,7 @@ id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
 id gone
+id google_map
 id graph
 id graph_wrap
 id group_divider

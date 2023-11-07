@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.uiuc.cs427app"
     android:versionCode="1"
-    android:versionName="1.0" > <!-- <meta-data -->
-    <!-- android:name="com.google.android.geo.API_KEY" -->
-    <!-- android:value="${APIKEY}" /> -->
+    android:versionName="1.0" >
+
     <uses-sdk
         android:minSdkVersion="29"
         android:targetSdkVersion="32" />
@@ -66,6 +65,11 @@
         <activity
             android:name="edu.uiuc.cs427app.SearchActivity"
             android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAt4V4o4SmjB8-OjoelHKYvt6G3o0eq9Yc " />
+
         <activity
             android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
             android:exported="false"

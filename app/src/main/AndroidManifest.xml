@@ -43,9 +43,11 @@
         <activity
             android:name=".SearchActivity"
             android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAt4V4o4SmjB8-OjoelHKYvt6G3o0eq9Yc " />
     </application>
-<!--    <meta-data-->
-<!--        android:name="com.google.android.geo.API_KEY"-->
-<!--        android:value="${APIKEY}" />-->
+
 
 </manifest>

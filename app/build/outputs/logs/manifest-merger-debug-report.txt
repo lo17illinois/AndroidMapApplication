@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:2:1-51:12
-INJECTED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:2:1-51:12
-INJECTED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:2:1-51:12
-INJECTED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:2:1-51:12
+ADDED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:2:1-53:12
+INJECTED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:2:1-53:12
 MERGED from [androidx.databinding:viewbinding:8.1.2] /Users/ninalin/.gradle/caches/transforms-3/cd06d5ff5d719620d57cc1a23ce5055d/transformed/viewbinding-8.1.2/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-places:17.0.0] /Users/ninalin/.gradle/caches/transforms-3/f6b7c12f26fc58420243bed0966fbab2/transformed/play-services-places-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.libraries.places:places:3.2.0] /Users/ninalin/.gradle/caches/transforms-3/d3d04bb71e7dcccd003b5d926b21bd6e/transformed/places-3.2.0/AndroidManifest.xml:2:1-24:12
@@ -130,8 +130,8 @@ MERGED from [io.grpc:grpc-android:1.52.1] /Users/ninalin/.gradle/caches/transfor
 	android:name
 		ADDED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:8:22-76
 application
-ADDED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:10:5-46:19
-INJECTED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:10:5-46:19
+ADDED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:10:5-50:19
+INJECTED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:10:5-50:19
 MERGED from [com.google.android.gms:play-services-places:17.0.0] /Users/ninalin/.gradle/caches/transforms-3/f6b7c12f26fc58420243bed0966fbab2/transformed/play-services-places-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-places:17.0.0] /Users/ninalin/.gradle/caches/transforms-3/f6b7c12f26fc58420243bed0966fbab2/transformed/play-services-places-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.libraries.places:places:3.2.0] /Users/ninalin/.gradle/caches/transforms-3/d3d04bb71e7dcccd003b5d926b21bd6e/transformed/places-3.2.0/AndroidManifest.xml:14:5-22:19
@@ -246,6 +246,12 @@ ADDED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidMani
 		ADDED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:45:13-36
 	android:name
 		ADDED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:44:13-43
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:47:9-49:72
+	android:value
+		ADDED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:49:13-69
+	android:name
+		ADDED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml:48:13-58
 uses-sdk
 INJECTED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/ninalin/StudioProjects/CS-427-Team-10/app/src/main/AndroidManifest.xml

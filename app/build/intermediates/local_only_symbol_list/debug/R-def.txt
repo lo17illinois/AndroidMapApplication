@@ -37,6 +37,7 @@ id button_register
 id cityInfo
 id details
 id editSearch
+id google_map
 id linearLayout
 id listPlaces
 id locationGeoCoordinate
