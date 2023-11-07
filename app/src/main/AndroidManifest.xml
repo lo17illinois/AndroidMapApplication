@@ -31,8 +31,11 @@
         <activity  android:name=".MainActivity"  android:exported="true">
         </activity>
         <activity android:name=".DetailsActivity" android:exported="true"></activity>
+        <activity android:name=".WeatherActivity" android:exported="true"></activity>
+
         <activity android:name=".ChooseUIDisplayActivity" android:exported="true"></activity>
         <activity android:name=".SearchActivity" android:exported="true" />
+
     </application>
 
 </manifest>

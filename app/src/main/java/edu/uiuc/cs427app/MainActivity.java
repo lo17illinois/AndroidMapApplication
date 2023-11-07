@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static int themeId;
     private static int themeColor1;
     private static int themeColor2;
+    private Spinner spinner;
     String username = "";
 
 
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         //loads in firebase user in preparation to read in user theme
         auth = FirebaseAuth.getInstance();
+
         user = auth.getCurrentUser();
         if (user != null) {
             //reads in the user profile, specifically the saved user theme
@@ -138,8 +140,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button = findViewById(R.id.logout);
         Button buttonNew = findViewById(R.id.buttonAddLocation);
         Button buttonChangeUI = findViewById(R.id.button6);
+        Button getweather = findViewById(R.id.buttonCheckWeather);
+
         buttonNew.setOnClickListener(this);
         buttonChangeUI.setOnClickListener(this);
+        getweather.setOnClickListener(this);
 
         //Create button functionality to go to LoginActivity
         button.setOnClickListener(new View.OnClickListener() {
@@ -166,7 +171,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 textView.setText(user.getEmail());
             }
         }
-        Spinner spinner = findViewById(R.id.spinner);
+         spinner = findViewById(R.id.spinner);
 
         // Initialize Firestore data
         db.collection("users")
@@ -263,15 +268,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            } catch (InterruptedException e) {
 //                throw new RuntimeException(e);
 //            }
-//            if (city != null)
 //                cityNames.add(city);
 //            else
 //                cityNames.add("Invalid");
 //        }
-        for (String city : cities) {
-            cityNames.add(city);
+        if (cities != null) {
+            for (String city : cities) {
+                cityNames.add(city);
+            }
+        } else {
+            cityNames.add("Invalid");
         }
-
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, cityNames);                    // put the citynames into adapter for the spinner to use
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -312,6 +319,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button6:
                 intent = new Intent(this, ChooseUIDisplayActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.buttonCheckWeather:
+                // Retrieve the selected city from the Spinner
+                System.out.println("test");
+
+                String selectedCity = spinner.getSelectedItem().toString();
+                System.out.println(selectedCity);
+                // Create an Intent to launch the WeatherActivity
+                Intent weatherIntent = new Intent(this, WeatherActivity.class);
+
+                // Pass the selected city as an extra to the WeatherActivity
+                weatherIntent.putExtra("selectedCity", selectedCity);
+
+                // Start the WeatherActivity with the selected city
+                startActivity(weatherIntent);
+                // TODO: Make an API request to fetch weather data for the selected city
+                // Ensure you handle the request asynchronously.
+
+                // TODO: Update the UI to display weather information once data is fetched.
+                // Use a TextView or other UI element to display the weather details.
                 break;
         }
     }
