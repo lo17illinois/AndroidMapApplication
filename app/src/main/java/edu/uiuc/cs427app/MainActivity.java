@@ -118,7 +118,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             window1.setStatusBarColor(themeColor2);
                             getSupportActionBar().setDisplayShowTitleEnabled(false);
                             getSupportActionBar().setDisplayShowTitleEnabled(true);
-                            //Initialize MainActivity-specific UI features
                             setupUI();
                         } else {
                         }
@@ -131,7 +130,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             Log.e("Firestore", "User not logged in");
         }
-        setupUI();
     }
 
     //Initialize MainActivity-specific UI features

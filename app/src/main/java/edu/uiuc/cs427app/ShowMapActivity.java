@@ -110,8 +110,6 @@ public class ShowMapActivity extends AppCompatActivity implements OnMapReadyCall
                             window1.setStatusBarColor(themeColor2);
                             getSupportActionBar().setDisplayShowTitleEnabled(false);
                             getSupportActionBar().setDisplayShowTitleEnabled(true);
-                            //Initialize MainActivity-specific UI features
-//                            setupUI();
                         } else {
                         }
                     } else {
@@ -125,6 +123,8 @@ public class ShowMapActivity extends AppCompatActivity implements OnMapReadyCall
         }
         setupUI();
     }
+
+    //Initialize ShowMapActivity specific UI features
     private void setupUI() {
 
         //Retrieve the top city from the intent
@@ -148,6 +148,7 @@ public class ShowMapActivity extends AppCompatActivity implements OnMapReadyCall
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.google_map);
         mapFragment.getMapAsync(this);
     }
+
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
