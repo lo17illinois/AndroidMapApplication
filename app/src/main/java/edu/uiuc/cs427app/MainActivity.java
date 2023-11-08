@@ -16,6 +16,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import edu.uiuc.cs427app.databinding.ActivityMainBinding;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import android.widget.AdapterView;
@@ -118,6 +119,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             window1.setStatusBarColor(themeColor2);
                             getSupportActionBar().setDisplayShowTitleEnabled(false);
                             getSupportActionBar().setDisplayShowTitleEnabled(true);
+                            //Initialize MainActivity-specific UI features
                             setupUI();
                         } else {
                         }
@@ -242,6 +244,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Log.i("X_coords premove", X_coords.toString());
                     Log.i("Y_coords premove", Y_coords.toString());
 
+                    //change fav cities + coordinates for local variables
                     fav_cities.remove(position-1);
                     X_coords.remove(position-1);
                     Y_coords.remove(position-1);
@@ -250,6 +253,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Log.i("X_coords afterremove", X_coords.toString());
                     Log.i("Y_coords afterremove", Y_coords.toString());
 
+                    //Update user profile on updated fav cities + coordinates
+                    // Update docRef 'location' field with the updated fav_cities list
                     docRef.update("locations", fav_cities)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
@@ -269,6 +274,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 public void onFailure(@NonNull Exception e) {
                                     // Handle any errors that occurred during the deletion
                                 }
+                            });
+                    Log.i("test", "test1");
+                    // Update docRef 'location' field with the updated city latitude list
+                    docRef.update("coordinateX", X_coords)
+                            .addOnSuccessListener(aVoid -> {
+                                Log.d("Firestore", "coordinate X successfully updated.");
+                            })
+                            .addOnFailureListener(e -> {
+                                Log.e("Firestore", "Error updating user locations", e);
+                            });
+                    Log.i("test", "test2");
+                    // Update docRef 'location' field with the updated city longitude list
+                    docRef.update("coordinateY", Y_coords)
+                            .addOnSuccessListener(aVoid -> {
+                                Log.d("Firestore", "coordinate Y successfully updated.");
+                            })
+                            .addOnFailureListener(e -> {
+                                Log.e("Firestore", "Error updating user locations", e);
                             });
                 }
             }
