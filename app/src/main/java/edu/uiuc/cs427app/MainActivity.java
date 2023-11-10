@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button = findViewById(R.id.logout);
         Button buttonNew = findViewById(R.id.buttonAddLocation);
         Button buttonChangeUI = findViewById(R.id.button6);
-        Button getweather = findViewById(R.id.buttonCheckWeather);
+        Button getweather = findViewById(R.id.buttonViewWeather);
 
         buttonNew.setOnClickListener(this);
         buttonChangeUI.setOnClickListener(this);
@@ -415,7 +415,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, ChooseUIDisplayActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.buttonCheckWeather:
+            case R.id.buttonViewWeather:
                 // Retrieve the selected city from the Spinner
                 System.out.println("test");
 
