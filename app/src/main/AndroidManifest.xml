@@ -28,12 +28,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity  android:name=".MainActivity"  android:exported="true">
-        </activity>
-        <activity android:name=".DetailsActivity" android:exported="true"></activity>
-        <activity android:name=".WeatherActivity" android:exported="true"></activity>
+        <activity  android:name=".MainActivity"  android:exported="true"/>
+        <activity android:name=".DetailsActivity" android:exported="true"/>
+        <activity android:name=".WeatherActivity" android:exported="true"/>
 
-        <activity android:name=".ChooseUIDisplayActivity" android:exported="true"></activity>
+        <activity android:name=".ChooseUIDisplayActivity" android:exported="true"/>
         <activity android:name=".SearchActivity" android:exported="true" />
 
     </application>

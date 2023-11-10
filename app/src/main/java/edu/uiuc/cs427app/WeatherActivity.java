@@ -1,5 +1,7 @@
 package edu.uiuc.cs427app;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,9 +14,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.HttpException;
 
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Button;
 import android.content.Intent;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -26,13 +36,85 @@ public class WeatherActivity extends AppCompatActivity {
     private static final String BASE_URL = "https://api.openweathermap.org/data/2.5/"; // Replace with your API's base URL
     private static final String API_KEY = "e70c05c6351eee727a7e8d183d749e3e"; // Replace with your API key
 
+    FirebaseAuth auth;
+    FirebaseUser user;
+    String userTheme;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private static int themeColor1;
+    private static int themeColor2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+        if (user != null) {
+            //reads in the user profile, specifically the saved user theme
+            DocumentReference userDocRef = db.collection("users").document(user.getUid());
+            userDocRef.get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        // Retrieve user theme from the document
+                        userTheme = document.getString("userTheme");
+                        if (userTheme != null) {
+                            Log.i("RetrievedUser", userTheme);
+                            //set the UI theme to the user theme saved onto the users profile
+                            changeTheme.setTheme(this, userTheme);
+                            //The ActionBar and StatusBar doesn't change with the setTheme functionality so they are manually changed below
+                            Window window1 = getWindow();
+                            switch (userTheme) {
+                                case "theme1":
+                                    //Intializes the colors for theme1 for ActionBar + StatusBar
+                                    themeColor1 = Color.parseColor("#FF6200EE");
+                                    themeColor2 = Color.parseColor("#FF3700B3");
+                                    break;
+                                case "theme2":
+                                    //Intializes the colors for theme2 for ActionBar + StatusBar
+                                    themeColor1 = Color.parseColor("#FF903A");
+                                    themeColor2 = Color.parseColor("#FFBB86");
+                                    break;
+                                case "theme3":
+                                    //Intializes the colors for theme3 for ActionBar + StatusBar
+                                    themeColor1 = Color.parseColor("#b46b41");
+                                    themeColor2 = Color.parseColor("#cd9575");
+                                    break;
+                                case "theme4":
+                                    //Intializes the colors for theme4 for ActionBar + StatusBar
+                                    themeColor1 = Color.parseColor("#3aa9ff");
+                                    themeColor2 = Color.parseColor("#86caff");
+                                    break;
+                                default:
+                                    //Intializes the colors for default=theme1 for ActionBar + StatusBar
+                                    themeColor1 = Color.parseColor("#FF6200EE");
+                                    themeColor2 = Color.parseColor("#FF3700B3");
+                                    break;
+                            }
+                            //Manually changes the ActionBar + StatusBar colors
+                            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(themeColor1));
+                            window1.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                            window1.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+                            window1.setStatusBarColor(themeColor2);
+
+                            getSupportActionBar().setDisplayShowTitleEnabled(false);
+                            getSupportActionBar().setDisplayShowTitleEnabled(true);
+                        } else {
+                        }
+                    } else {
+                    }
+                } else {
+                    Log.e("Firestore", "Error getting user document", task.getException());
+                }
+            });
+        } else {
+            Log.e("Firestore", "User not logged in");
+        }
+
         setContentView(R.layout.activity_weather);
 
         // Retrieve the selected city from the Intent
         String selectedCity = getIntent().getStringExtra("selectedCity");
+
+        // Retrieve the currentTime using api calls
         Date currentTime = null;
         try {
             currentTime = new DateTimeInfoAsyncTask().execute(selectedCity).get();
@@ -41,6 +123,7 @@ public class WeatherActivity extends AppCompatActivity {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        // Update the ui based on what the current time was
         if (currentTime != null) {
             TextView dateTimeTextView = findViewById(R.id.textViewDateTime);
             dateTimeTextView.setText(currentTime.toString());
