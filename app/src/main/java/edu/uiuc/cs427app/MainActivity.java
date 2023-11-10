@@ -16,6 +16,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import edu.uiuc.cs427app.databinding.ActivityMainBinding;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import android.widget.AdapterView;
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int position = 0;
     //    List<GeoPoint> fav_cities  = new ArrayList<GeoPoint>();
     List<String> fav_cities = new ArrayList<>(); // this is temporary long term goal is to have it geopoint
+    List <Double> X_coords = new ArrayList<>();
+    List <Double> Y_coords = new ArrayList<>();
     FirebaseAuth auth;
     FirebaseUser user;
     String userTheme;
@@ -131,7 +134,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             Log.e("Firestore", "User not logged in");
         }
-        setupUI();
     }
 
     //Initialize MainActivity-specific UI features
@@ -183,8 +185,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (task.isSuccessful()) {
                             DocumentSnapshot document = task.getResult();
                             if (document.exists()) {
+                                Log.i("MainActivity","triedtoRetrieve");
                                 //fav_cities = (List<GeoPoint>) document.get("locations");                 // there should always be a location array, even if it's empty
-                                fav_cities = (List<String>) document.get("locations");
+                                if (document.contains("locations")){
+                                    fav_cities = (List<String>) document.get("locations");
+                                    Log.i("fav_cities", fav_cities.toString());
+                                }
+                                if (document.contains("coordinateX")){
+                                    X_coords = (List<Double>) document.get("coordinateX");
+                                    Log.i("X_coords", X_coords.toString());
+                                }
+                                if (document.contains("coordinateY")){
+                                    Y_coords = (List<Double>) document.get("coordinateY");
+                                    Log.i("Y_coords", Y_coords.toString());
+                                }
+
                                 String fav_theme = document.getString("userTheme");
 
                                 // Firestore data received
@@ -230,7 +245,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View view) {
                 if (position != 0) {                                                                              // if it was on position 0 then we don't want to do anything since that is the prompt location
                     DocumentReference docRef = db.collection("users").document(user.getUid());               // otherwise, we update the firestore to show that the location was removed
+                    Log.i("fav_cities preremove", fav_cities.toString());
+                    Log.i("X_coords premove", X_coords.toString());
+                    Log.i("Y_coords premove", Y_coords.toString());
+
+                    //change fav cities + coordinates for local variables
                     fav_cities.remove(position-1);
+                    X_coords.remove(position-1);
+                    Y_coords.remove(position-1);
+
+                    Log.i("fav_cities afterremove", fav_cities.toString());
+                    Log.i("X_coords afterremove", X_coords.toString());
+                    Log.i("Y_coords afterremove", Y_coords.toString());
+
+                    //Update user profile on updated fav cities + coordinates
+                    // Update docRef 'location' field with the updated fav_cities list
                     docRef.update("locations", fav_cities)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
@@ -251,6 +280,72 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     // Handle any errors that occurred during the deletion
                                 }
                             });
+                    Log.i("test", "test1");
+                    // Update docRef 'location' field with the updated city latitude list
+                    docRef.update("coordinateX", X_coords)
+                            .addOnSuccessListener(aVoid -> {
+                                Log.d("Firestore", "coordinate X successfully updated.");
+                            })
+                            .addOnFailureListener(e -> {
+                                Log.e("Firestore", "Error updating user locations", e);
+                            });
+                    Log.i("test", "test2");
+                    // Update docRef 'location' field with the updated city longitude list
+                    docRef.update("coordinateY", Y_coords)
+                            .addOnSuccessListener(aVoid -> {
+                                Log.d("Firestore", "coordinate Y successfully updated.");
+                            })
+                            .addOnFailureListener(e -> {
+                                Log.e("Firestore", "Error updating user locations", e);
+                            });
+                }
+            }
+        });
+
+        //Create button functionality to view map of selected city
+        Button buttonViewMap = findViewById(R.id.buttonViewMap);
+        buttonViewMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("MainActivity", "showmap button pressed");
+                Log.i("fav_cities", fav_cities.toString());
+                Log.i("X_coords", X_coords.toString());
+                Log.i("Y_coords", Y_coords.toString());
+                if (position != 0){
+                    // Get the top element from the list
+                    Log.i("MainActivity", "showmap button pressed2");
+
+                    //String selectedCity = fav_cities.get(0);
+                    String selectedCity = fav_cities.get(position-1);
+
+                    Log.i("selectedCity",selectedCity);
+                    Double selectedCity_XCoord = 0.0;
+                    Double selectedCity_YCoord = 0.0;
+                    if (X_coords.size() > 0) {
+                        Log.i("X_coords", "if triggered");
+                        //selectedCity_XCoord = X_coords.get(0);
+                        selectedCity_XCoord = X_coords.get(position-1);
+                        Log.i("selectedCity_XCoord", String.valueOf(selectedCity_XCoord));
+                    } else {
+                        Log.i("X_coord", "else triggered");
+                    }
+                    if (Y_coords.size() > 0) {
+                        Log.i("Y_coords", "if triggered");
+                        //selectedCity_YCoord = Y_coords.get(0);
+                        selectedCity_YCoord = Y_coords.get(position-1);
+                        Log.i("selectedCity_YCoord", String.valueOf(selectedCity_YCoord));
+                    } else {
+                        Log.i("Y_coord", "else triggered");
+                    }
+                    // Create an Intent to start the ViewLocationActivity
+                    Intent intent = new Intent(getApplicationContext(), ShowMapActivity.class);
+                    intent.putExtra("selected_city", selectedCity);
+                    intent.putExtra("selected_city_XCoord", selectedCity_XCoord);
+                    intent.putExtra("selected_city_YCoord", selectedCity_YCoord);
+                    startActivity(intent);
+                }
+                else {
+                    Log.i("show map button","somethign went wrong");
                 }
             }
         });

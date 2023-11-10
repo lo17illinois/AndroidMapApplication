@@ -80,6 +80,23 @@
                 android:src="@drawable/ic_trash"
                 android:contentDescription="@string/remove_button_description" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity='center'
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/buttonViewWeather"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="View Weather" />
+            <Button
+                android:id="@+id/buttonViewMap"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="View Map" />
+        </LinearLayout>
         <Button
             android:id="@+id/buttonAddLocation"
             android:layout_width="match_parent"
