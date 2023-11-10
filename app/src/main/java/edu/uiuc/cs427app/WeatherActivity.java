@@ -134,7 +134,7 @@ public class WeatherActivity extends AppCompatActivity {
         // Update the ui based on what the current time was
         if (currentTime != null) {
             TextView dateTimeTextView = findViewById(R.id.textViewDateTime);
-            dateTimeTextView.setText(currentTime);
+            dateTimeTextView.setText("Date/Time:\n" + currentTime);
         } else {
             TextView dateTimeTextView = findViewById(R.id.textViewDateTime);
             dateTimeTextView.setText("Unable to determine time");
@@ -177,11 +177,11 @@ public class WeatherActivity extends AppCompatActivity {
                         TextView weatherConditionTextView = findViewById(R.id.textViewWeatherCondition);
                         TextView windSpeedTextView = findViewById(R.id.textViewWindCondition);
 
-                        cityTextView.setText("City: " + selectedCity);
-                        temperatureTextView.setText("Temperature: " + weatherData.getMainData().getTemperature() + "°K");
-                        humidityTextView.setText("Humidity: " + weatherData.getMainData().getHumidity() + "%");
-                        weatherConditionTextView.setText("Weather: " + weatherData.getWeatherConditions().get(0).getMain());
-                        windSpeedTextView.setText("Wind Speed: " + weatherData.getWindCondition().getSpeed() + " m/s");  }
+                        cityTextView.setText(selectedCity);
+                        temperatureTextView.setText(weatherData.getMainData().getTemperature() + "°K");
+                        humidityTextView.setText("Humidity:\n" + weatherData.getMainData().getHumidity() + "%");
+                        weatherConditionTextView.setText("Weather:\n" + weatherData.getWeatherConditions().get(0).getMain());
+                        windSpeedTextView.setText("Wind Speed:\n" + weatherData.getWindCondition().getSpeed() + " m/s");  }
                 } else {
                     // Handle the error response here
 
