@@ -97,6 +97,7 @@ public class WeatherActivity extends AppCompatActivity {
 
                             getSupportActionBar().setDisplayShowTitleEnabled(false);
                             getSupportActionBar().setDisplayShowTitleEnabled(true);
+                            setupUI();
                         } else {
                         }
                     } else {
@@ -108,9 +109,11 @@ public class WeatherActivity extends AppCompatActivity {
         } else {
             Log.e("Firestore", "User not logged in");
         }
-
+    }
+    private void setupUI() {
         setContentView(R.layout.activity_weather);
 
+        Button backButton = findViewById(R.id.backbutton);
         // Retrieve the selected city from the Intent
         String selectedCity = getIntent().getStringExtra("selectedCity");
 
@@ -201,7 +204,6 @@ public class WeatherActivity extends AppCompatActivity {
 
 
         });
-        Button backButton = findViewById(R.id.backbutton);
         backButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
