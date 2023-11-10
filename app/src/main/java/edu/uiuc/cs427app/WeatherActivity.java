@@ -26,6 +26,8 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
@@ -33,8 +35,8 @@ import java.util.concurrent.ExecutionException;
 
 public class WeatherActivity extends AppCompatActivity {
     private static final String TAG = "WeatherActivity";
-    private static final String BASE_URL = "https://api.openweathermap.org/data/2.5/"; // Replace with your API's base URL
-    private static final String API_KEY = "e70c05c6351eee727a7e8d183d749e3e"; // Replace with your API key
+    private static final String BASE_URL = "https://api.openweathermap.org/data/2.5/";
+    private static final String API_KEY = "e70c05c6351eee727a7e8d183d749e3e";
 
     FirebaseAuth auth;
     FirebaseUser user;
@@ -47,6 +49,8 @@ public class WeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
+
+        // Get the theme for the current user and update the activity
         if (user != null) {
             //reads in the user profile, specifically the saved user theme
             DocumentReference userDocRef = db.collection("users").document(user.getUid());
@@ -118,7 +122,7 @@ public class WeatherActivity extends AppCompatActivity {
         String selectedCity = getIntent().getStringExtra("selectedCity");
 
         // Retrieve the currentTime using api calls
-        Date currentTime = null;
+        String currentTime = null;
         try {
             currentTime = new DateTimeInfoAsyncTask().execute(selectedCity).get();
         } catch (ExecutionException e) {
@@ -126,10 +130,11 @@ public class WeatherActivity extends AppCompatActivity {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         // Update the ui based on what the current time was
         if (currentTime != null) {
             TextView dateTimeTextView = findViewById(R.id.textViewDateTime);
-            dateTimeTextView.setText(currentTime.toString());
+            dateTimeTextView.setText(currentTime);
         } else {
             TextView dateTimeTextView = findViewById(R.id.textViewDateTime);
             dateTimeTextView.setText("Unable to determine time");
@@ -214,23 +219,32 @@ public class WeatherActivity extends AppCompatActivity {
     });
     }
 
-    private class DateTimeInfoAsyncTask extends AsyncTask<String, Void, Date> {
+    private class DateTimeInfoAsyncTask extends AsyncTask<String, Void, String> {
+        // calls on classes to get lat long for city and then the time for that lat long
         @Override
-        protected Date doInBackground(String... params) {
+        protected String doInBackground(String... params) {
             String selectedCity = params[0];
+            // getting the latitude longitude
             double[] latLng = GeocodingApiClient.getLatLngForCity(selectedCity);
             if (latLng != null) {
                 Log.i(TAG, "Successfully retrieved LatLng for " + selectedCity + latLng);
                 double latitude = latLng[0];
                 double longitude = latLng[1];
+                // Getting the timezone to use for the time
                 String timeZoneId = TimeZoneApiClient.getTimeZoneId(latitude, longitude);
                 if (timeZoneId != null) {
-                    Log.i(TAG, "Successfully retrieved timeZoneID for " + selectedCity + timeZoneId);
-                    TimeZone timeZone = TimeZone.getTimeZone("America/New_York"); // Replace with the appropriate time zone
+                    Log.i(TAG, "Successfully retrieved timeZoneID for " + selectedCity + ": " + timeZoneId);
+                    TimeZone timeZone = TimeZone.getTimeZone(timeZoneId);
+                    // getting the time
                     Calendar calendar = Calendar.getInstance(timeZone);
                     Date currentTime = calendar.getTime();
-                    Log.i(TAG, "The current time for " + selectedCity + "is: " + currentTime);
-                    return currentTime;
+                    // formatting the date so that it's <Day of Week>, <Month Name> <day of month>, <year>
+                    //                                  <12-hour hour>:<minute>:<second> <am/pm> <timezone>
+                    DateFormat dateFormat = new SimpleDateFormat("EEEE, MMMM d, yyyy\nhh:mm:ss a z");
+                    dateFormat.setTimeZone(timeZone);
+                    String formattedTime = dateFormat.format(currentTime);
+                    Log.i(TAG, "The current time for " + selectedCity + "is: " + formattedTime);
+                    return formattedTime;
                 } else {
                     Log.i(TAG, "Failed to retrieve timeZoneID for " + selectedCity);
                 }

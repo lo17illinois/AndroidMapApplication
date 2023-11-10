@@ -15,12 +15,14 @@ public class GeocodingApiClient {
     private static final String BASE_URL = "https://maps.googleapis.com/maps/api/geocode/json";
     private static final String API_KEY = "AIzaSyAWShdyunaphUFSlfem19ZvYPJalS8td1A";
 
+    // returns the lat long for the corresponding city
     public static double[] getLatLngForCity(String city) {
         try {
             // Build the URL for the API request
             String apiUrl = BASE_URL + "?address=" + URLEncoder.encode(city, "UTF-8") +
                     "&key=" + API_KEY;
 
+            // do the actual request
             URL url = new URL(apiUrl);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 

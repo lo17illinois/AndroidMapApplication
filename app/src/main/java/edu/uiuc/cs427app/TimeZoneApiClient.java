@@ -14,6 +14,7 @@ public class TimeZoneApiClient {
     private static final String BASE_URL = "https://maps.googleapis.com/maps/api/timezone/json";
     private static final String API_KEY = "AIzaSyAWShdyunaphUFSlfem19ZvYPJalS8td1A";
 
+    // returns the timezone corresponding to a certain lat long
     public static String getTimeZoneId(double latitude, double longitude) {
         try {
             long timestamp = System.currentTimeMillis() / 1000; // Current Unix timestamp
@@ -23,6 +24,7 @@ public class TimeZoneApiClient {
                     "&timestamp=" + timestamp +
                     "&key=" + API_KEY;
 
+            // make the actual request
             URL url = new URL(apiUrl);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
