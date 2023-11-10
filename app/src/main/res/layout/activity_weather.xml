@@ -17,10 +17,19 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:id="@+id/textViewTemperature"
+        android:id="@+id/textViewDateTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewCityName"
+        android:text=""
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textViewTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewDateTime"
         android:text="Temperature: "
         android:textSize="18sp"
         android:layout_centerHorizontal="true" />

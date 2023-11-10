@@ -327,6 +327,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String selectedCity = spinner.getSelectedItem().toString();
                 System.out.println(selectedCity);
                 // Create an Intent to launch the WeatherActivity
+                if (spinner.getSelectedItemPosition() == 0)
+                    break;
                 Intent weatherIntent = new Intent(this, WeatherActivity.class);
 
                 // Pass the selected city as an extra to the WeatherActivity

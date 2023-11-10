@@ -1,5 +1,6 @@
 package edu.uiuc.cs427app;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +16,11 @@ import android.widget.TextView;
 import android.widget.Button;
 import android.content.Intent;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
+import java.util.concurrent.ExecutionException;
+
 public class WeatherActivity extends AppCompatActivity {
     private static final String TAG = "WeatherActivity";
     private static final String BASE_URL = "https://api.openweathermap.org/data/2.5/"; // Replace with your API's base URL
@@ -27,6 +33,21 @@ public class WeatherActivity extends AppCompatActivity {
 
         // Retrieve the selected city from the Intent
         String selectedCity = getIntent().getStringExtra("selectedCity");
+        Date currentTime = null;
+        try {
+            currentTime = new DateTimeInfoAsyncTask().execute(selectedCity).get();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if (currentTime != null) {
+            TextView dateTimeTextView = findViewById(R.id.textViewDateTime);
+            dateTimeTextView.setText(currentTime.toString());
+        } else {
+            TextView dateTimeTextView = findViewById(R.id.textViewDateTime);
+            dateTimeTextView.setText("Unable to determine time");
+        }
 
         // Create a Retrofit instance
         Retrofit retrofit = new Retrofit.Builder()
@@ -106,5 +127,32 @@ public class WeatherActivity extends AppCompatActivity {
             }
 
     });
-}}
+    }
 
+    private class DateTimeInfoAsyncTask extends AsyncTask<String, Void, Date> {
+        @Override
+        protected Date doInBackground(String... params) {
+            String selectedCity = params[0];
+            double[] latLng = GeocodingApiClient.getLatLngForCity(selectedCity);
+            if (latLng != null) {
+                Log.i(TAG, "Successfully retrieved LatLng for " + selectedCity + latLng);
+                double latitude = latLng[0];
+                double longitude = latLng[1];
+                String timeZoneId = TimeZoneApiClient.getTimeZoneId(latitude, longitude);
+                if (timeZoneId != null) {
+                    Log.i(TAG, "Successfully retrieved timeZoneID for " + selectedCity + timeZoneId);
+                    TimeZone timeZone = TimeZone.getTimeZone("America/New_York"); // Replace with the appropriate time zone
+                    Calendar calendar = Calendar.getInstance(timeZone);
+                    Date currentTime = calendar.getTime();
+                    Log.i(TAG, "The current time for " + selectedCity + "is: " + currentTime);
+                    return currentTime;
+                } else {
+                    Log.i(TAG, "Failed to retrieve timeZoneID for " + selectedCity);
+                }
+            } else {
+                Log.i(TAG, "Failed to retrieve LatLng for " + selectedCity);
+            }
+            return null;
+        }
+    }
+}
