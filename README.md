@@ -123,7 +123,7 @@ Meeting notes: Discussing Milestone 3 progress so far and finalizing all tasks f
 </br>
 Members present: binglin3, hadil, alya2, danxuan3, nnatha3, co17, phulare2, lo17
 </br>
-Meeting notes: Discussed what happened at Milestone 3 and how we can avoid it. We agreed that we would have a meeting on Tuesday from 9:00 to 10:00 p.m. to check our progress and keep our Friday meeting if needed. All tasks should be ready by Tuesday, November 7. 
+Meeting notes: Discussed what happened at Milestone 3 and how we can avoid it. We agreed that we will have a meeting on Tuesday from 9:00 to 10:00 p.m. to check our progress and keep our Friday meeting if needed. All tasks should be ready by Tuesday, November 7. 
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
@@ -140,20 +140,20 @@ Meeting notes: Discussed what happened at Milestone 3 and how we can avoid it. W
 
 <b>Week 7</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: binglin3, hadil, alya2, danxuan3, nnatha3, co17, phulare2, lo17
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: Discussed progress on Milestone 4 and split Milestone 5's tasks
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|hadil           |Read Milestone 5, update weekly report, record video for Milestone 4 submission|Lead team meeting, Work on test 2 in Milestone 5|
+|binglin3        |Read Milestone 5, finalize Milestone 4|Work on test 5 in Milestone 5|
+|phulare2        |Read Milestone 5, finalize Milestone 4|Work on test 6 in Milestone 5|
+|nnatha3         |Read Milestone 5, finalize Milestone 4|Work on test 3 in Milestone 5|
+|co17            |Read Milestone 5, finalize Milestone 4|Work on test 4 in Milestone 5|
+|lo17            |Read Milestone 5, finalize Milestone 4|Work on test 7 in Milestone 5|
+|danxuan3        |Read Milestone 5, finalize Milestone 4|Work on test 8 in Milestone 5|
+|alya2           |Read Milestone 5, finalize Milestone 4|Work on test 1 in Milestone 5|
 </br>
 
 
