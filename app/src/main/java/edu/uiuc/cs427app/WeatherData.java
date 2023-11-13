@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+/**
+ * Represents weather data containing information about weather conditions, and wind conditions.
+ */
 
 public class WeatherData {
     @SerializedName("main")
