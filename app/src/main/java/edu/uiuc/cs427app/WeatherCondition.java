@@ -3,6 +3,7 @@ package edu.uiuc.cs427app;
 import com.google.gson.annotations.SerializedName;
 
 public class WeatherCondition {
+    // The main weather condition description
     @SerializedName("main")
     private String main;
 
