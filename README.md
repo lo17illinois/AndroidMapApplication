@@ -159,20 +159,20 @@ Meeting notes: Discussed progress on Milestone 4 and split Milestone 5's tasks
 
 <b>Week 8</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: binglin3, hadil, alya2, danxuan3, nnatha3, co17, lo17
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: Discussing Milestone 5 progress
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+hadil            |Worked on test 2                  |Lead team meeting, continue working on test 2 in Milestone 5|
+|binglin3        |Worked on test 5                  |Continue working on test 5 in Milestone 5|
+|phulare2        |Worked on test 6                  |Continue working test 6 in Milestone 5|
+|nnatha3         |Worked on test 3                  |Continue working test 3 in Milestone 5|
+|co17            |Worked on test 4                  |Continue working on test 4 in Milestone 5|
+|lo17            |Worked on test 7                  |Continue working on test 7 in Milestone 5|
+|danxuan3        |Worked on test 8                  |Continue working on test 8 in Milestone 5|
+|alya2           |Worked on test 1                  |Continue working on test 1 in Milestone 5|
 </br>
 
 
