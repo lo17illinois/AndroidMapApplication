@@ -51,7 +51,7 @@ import java.util.concurrent.TimeUnit;
 //Tests the ShowMap functionality by showing two cities and asserts that the correct city and coordinates are shown accordingly
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class LoginActivityTest {
+public class ShowMapActivityTest {
 
     //Launches the LoginActivity at start of test
     @Rule
