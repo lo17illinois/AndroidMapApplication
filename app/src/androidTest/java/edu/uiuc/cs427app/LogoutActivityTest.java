@@ -29,7 +29,7 @@ import org.junit.runner.RunWith;
 
 import java.util.concurrent.TimeUnit;
 
-//Tests the ShowMap functionality by showing two cities and asserts that the correct city and coordinates are shown accordingly
+//Tests the Logout functionality
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class LogoutActivityTest {
