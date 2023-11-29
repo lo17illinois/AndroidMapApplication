@@ -51,7 +51,7 @@ import java.util.concurrent.TimeUnit;
 //Tests the ShowMap functionality by showing two cities and asserts that the correct city and coordinates are shown accordingly
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class ShowMapActivityTest {
+public class B_ShowMapActivityTest {
 
     //Launches the LoginActivity at start of test
     @Rule
@@ -163,6 +163,15 @@ public class ShowMapActivityTest {
         // Wait for some time
         IdlingResource idlingResource8 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource8);
+
+        // Press logout (to LoginActivity page)
+        onView(withId(R.id.logout)).perform(click());
+
+        // Wait for some time
+        IdlingResource idlingResource9 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
+        Espresso.registerIdlingResources(idlingResource9);
+        Espresso.unregisterIdlingResources(idlingResource8);
+        Espresso.unregisterIdlingResources(idlingResource9);
     }
 
     //A custom matcher for identifying the spinner

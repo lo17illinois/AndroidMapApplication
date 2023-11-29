@@ -30,7 +30,7 @@ import org.junit.runner.RunWith;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 @RunWith(AndroidJUnit4.class)
-public class SignupActivitySuccessfulTest {
+public class Z_SignupActivitySuccessfulTest {
     /**
      * Use {@link ActivityScenarioRule} to create and launch the activity under test.
      */
@@ -59,7 +59,9 @@ public class SignupActivitySuccessfulTest {
 
         // Act
         onView(withId(R.id.button_register)).perform(click());
-        TimeUnit.SECONDS.sleep(1);
+        TimeUnit.SECONDS.sleep(2);
+
+
 
         // Assert
         auth.signInWithEmailAndPassword(rightEmail, rightPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

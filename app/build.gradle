@@ -13,7 +13,7 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
-
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -31,6 +31,9 @@ android {
         viewBinding true
     }
     namespace 'edu.uiuc.cs427app'
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
 }
 
 dependencies {
@@ -61,6 +64,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     // Maps SDK for Android
     implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestUtil 'androidx.test:orchestrator:1.2.0'
+
 }
 
 secrets {

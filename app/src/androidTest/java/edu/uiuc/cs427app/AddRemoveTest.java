@@ -308,5 +308,13 @@ public class AddRemoveTest {
                 .inRoot(isPlatformPopup())
                 .perform(click());
         Espresso.unregisterIdlingResources(idlingResource28);
+
+        // Press logout (to LoginActivity page)
+        onView(withId(R.id.logout)).perform(click());
+
+        // Wait for some time
+        IdlingResource idlingResource49 = new ElapsedTimeIdlingResource(100);
+        Espresso.registerIdlingResources(idlingResource49);
+        Espresso.unregisterIdlingResources(idlingResource49);
     }
 }

@@ -32,7 +32,7 @@ import java.util.concurrent.TimeUnit;
 //Tests the Logout functionality
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class LogoutActivityTest {
+public class A_LogoutActivityTest {
 
     //Launches the LoginActivity at start of test
     @Rule
@@ -66,7 +66,7 @@ public class LogoutActivityTest {
 
         // Wait for some time
         try {
-            TimeUnit.SECONDS.sleep(5);
+            TimeUnit.SECONDS.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -86,6 +86,13 @@ public class LogoutActivityTest {
 
         // Assertion that the login message is displayed at current page
         onView(withId(R.id.loginText)).check(matches(isDisplayed()));
+
+        // Wait for some time
+        try {
+            TimeUnit.SECONDS.sleep(10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         // Assertion that current user is logged out
         auth.getInstance().addAuthStateListener(new FirebaseAuth.AuthStateListener() {

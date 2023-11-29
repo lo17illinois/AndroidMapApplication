@@ -50,6 +50,8 @@ public class LoginActivityTest {
         String rightPassword = "hadil00";
         String rightEmail = rightUsername + "@example.com";
 
+        TimeUnit.SECONDS.sleep(10);
+
         onView(withId(R.id.username))
                 .perform(typeText(rightUsername), closeSoftKeyboard());
         onView(withId(R.id.password))
@@ -59,6 +61,12 @@ public class LoginActivityTest {
         // Act
         onView(withId(R.id.button_login)).perform(click());
         TimeUnit.SECONDS.sleep(10);
+
+        // Press logout (to LoginActivity page)
+        onView(withId(R.id.logout)).perform(click());
+
+        TimeUnit.SECONDS.sleep(10);
+
 
         // Assert
         mAuth.signInWithEmailAndPassword(rightEmail, rightPassword)

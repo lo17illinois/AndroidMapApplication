@@ -157,6 +157,15 @@ public class WeatherTest {
         // Wait for some time
         IdlingResource idlingResource8 = new ElapsedTimeIdlingResource(50); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource8);
+
+
+        // Press logout (to LoginActivity page)
+        onView(withId(R.id.logout)).perform(click());
+
+        // Wait for some time
+        IdlingResource idlingResource9 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
+        Espresso.registerIdlingResources(idlingResource9);
+        Espresso.unregisterIdlingResources(idlingResource9);
     }
 
     //A custom matcher for identifying the spinner
