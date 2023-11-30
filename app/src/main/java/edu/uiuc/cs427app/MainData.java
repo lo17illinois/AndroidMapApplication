@@ -15,4 +15,11 @@ public class MainData {
     public double getHumidity() {
         return humidity;
     }
+    public void setTemperature(double temperature){
+        this.temperature = temperature;
+    }
+
+    public void setHumidity(double humidity){
+        this.humidity = humidity;
+    }
 }

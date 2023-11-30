@@ -29,4 +29,16 @@ public class WeatherData {
     public WindCondition getWindCondition() {
         return windCondition;
     }
+
+    public void setMainData(MainData mainData) {
+        this.mainData = mainData;
+    }
+
+    public void setWeatherConditions(List<WeatherCondition> weatherConditions) {
+        this.weatherConditions = weatherConditions;
+    }
+
+    public void setWindCondition(WindCondition windCondition) {
+        this.windCondition = windCondition;
+    }
 }
