@@ -165,7 +165,7 @@ Meeting notes: Discussing Milestone 5 progress
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-hadil            |Worked on test 2                  |Lead team meeting, continue working on test 2 in Milestone 5|
+|hadil           |Worked on test 2                  |Lead team meeting, continue working on test 2 in Milestone 5|
 |binglin3        |Worked on test 5                  |Continue working on test 5 in Milestone 5|
 |phulare2        |Worked on test 6                  |Continue working test 6 in Milestone 5|
 |nnatha3         |Worked on test 3                  |Continue working test 3 in Milestone 5|
@@ -178,28 +178,28 @@ hadil            |Worked on test 2                  |Lead team meeting, continue
 
 <b>Week 9</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: binglin3, hadil, alya2, danxuan3, nnatha3, co17, phulare2, lo17
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: Finishing Milestone 5
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|hadil           |Worked on running all tests together|                      |
+|binglin3        |Worked on running all tests together|                      |
+|phulare2        |Worked on running all tests together|                      |
+|nnatha3         |Worked on running all tests together|                      |
+|co17            |Worked on running all tests together|                      |
+|lo17            |Worked on running all tests together|                      |
+|danxuan3        |Worked on running all tests together|                      |
+|alya2           |Worked on running all tests together|                      |
 </br>
 
 
 <b>Week 10</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: binglin3, hadil, alya2, danxuan3, nnatha3, co17, phulare2, lo17
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: Finishing Milestone 5
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
