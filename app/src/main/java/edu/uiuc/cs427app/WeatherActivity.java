@@ -152,8 +152,8 @@ public class WeatherActivity extends AppCompatActivity {
         WeatherApiService weatherApi = retrofit.create(WeatherApiService.class);
 
         //  API request using the selected city
-        if("Chicago".equals(selectedCity) || "New York".equals(selectedCity)) {
-            Log.e("WeatherActivity", "Selected City is NewYork or Chicago");
+        if("Champaign".equals(selectedCity)) {
+            Log.e("WeatherActivity", "Selected City is Champaign");
             WeatherData mockData = createDefaultWeatherData();
             TextView cityTextView = findViewById(R.id.textViewCityName);
 
@@ -168,9 +168,9 @@ public class WeatherActivity extends AppCompatActivity {
             weatherConditionTextView.setText("Weather:\n" + mockData.getWeatherConditions().get(0).getMain());
             windSpeedTextView.setText("Wind Speed:\n" + mockData.getWindCondition().getSpeed() + " m/s");
         }else {
-            Log.e("WeatherActivity", "Selected City is not NewYork or Chicago");
+            Log.e("WeatherActivity", "Selected City is not Champaign");
             Log.e("WeatherActivity", "Selected City is"+ selectedCity);
-            Call<WeatherData> call = weatherService.getWeatherData(selectedCity, API_KEY);
+            Call<WeatherData> call = weatherApi.getWeatherData(selectedCity, API_KEY);
             Log.d(TAG, "Request URL: " + call.request().url());
 
 
