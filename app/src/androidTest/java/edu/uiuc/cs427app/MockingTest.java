@@ -77,7 +77,7 @@ public class MockingTest {
         IdlingResource idlingResource2 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource2);
         // Select the spinner entry with "Chicago"
-        onData(allOf(is(instanceOf(String.class)), is("Champagin")))
+        onData(allOf(is(instanceOf(String.class)), is("Champaign")))
                 .inRoot(isPlatformPopup())
                 .perform(click());
         Espresso.unregisterIdlingResources(idlingResource2);
