@@ -13,6 +13,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.HttpException;
 
+import java.util.Arrays;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -37,6 +38,7 @@ public class WeatherActivity extends AppCompatActivity {
     private static final String TAG = "WeatherActivity";
     private static final String BASE_URL = "https://api.openweathermap.org/data/2.5/";
     private static final String API_KEY = "e70c05c6351eee727a7e8d183d749e3e";
+    private static WeatherService weatherService = null;
 
     FirebaseAuth auth;
     FirebaseUser user;
@@ -150,65 +152,83 @@ public class WeatherActivity extends AppCompatActivity {
         WeatherApiService weatherApi = retrofit.create(WeatherApiService.class);
 
         //  API request using the selected city
-        Call<WeatherData> call = weatherApi.getWeatherData(selectedCity, API_KEY);
-        Log.d(TAG, "Request URL: " + call.request().url());
+        if("Chicago".equals(selectedCity) || "New York".equals(selectedCity)) {
+            Log.e("WeatherActivity", "Selected City is NewYork or Chicago");
+            WeatherData mockData = createDefaultWeatherData();
+            TextView cityTextView = findViewById(R.id.textViewCityName);
+
+            TextView temperatureTextView = findViewById(R.id.textViewTemperature);
+            TextView humidityTextView = findViewById(R.id.textViewHumidity);
+            TextView weatherConditionTextView = findViewById(R.id.textViewWeatherCondition);
+            TextView windSpeedTextView = findViewById(R.id.textViewWindCondition);
+
+            cityTextView.setText(selectedCity);
+            temperatureTextView.setText(mockData.getMainData().getTemperature() + "°K");
+            humidityTextView.setText("Humidity:\n" + mockData.getMainData().getHumidity() + "%");
+            weatherConditionTextView.setText("Weather:\n" + mockData.getWeatherConditions().get(0).getMain());
+            windSpeedTextView.setText("Wind Speed:\n" + mockData.getWindCondition().getSpeed() + " m/s");
+        }else {
+            Log.e("WeatherActivity", "Selected City is not NewYork or Chicago");
+            Log.e("WeatherActivity", "Selected City is"+ selectedCity);
+            Call<WeatherData> call = weatherService.getWeatherData(selectedCity, API_KEY);
+            Log.d(TAG, "Request URL: " + call.request().url());
 
 
-        call.enqueue(new Callback<WeatherData>() {
-            @Override
-            public void onResponse(Call<WeatherData> call, Response<WeatherData> response) {
+            call.enqueue(new Callback<WeatherData>() {
+                @Override
+                public void onResponse(Call<WeatherData> call, Response<WeatherData> response) {
 
-                if (response.isSuccessful()) {
-                    //  successful response handled here
-                    WeatherData weatherData = response.body();
-                    Log.d(TAG, "WeatherData: " + weatherData); // Log the response
-                    System.out.println("no response");
+                    if (response.isSuccessful()) {
+                        //  successful response handled here
+                        WeatherData weatherData = response.body();
+                        Log.d(TAG, "WeatherData: " + weatherData); // Log the response
+                        System.out.println("no response");
 
-                    if (weatherData != null) {
-                        Log.d(TAG, "Temperature: " + weatherData.getMainData().getTemperature() + "°K");
-                        Log.d(TAG, "Humidity: " + weatherData.getMainData().getHumidity() + "%");
-                        Log.d(TAG, "Weather: " + weatherData.getWeatherConditions().get(0).getMain());
-                        Log.d(TAG, "Wind Speed: " + weatherData.getWindCondition().getSpeed() + " m/s");
+                        if (weatherData != null) {
+                            Log.d(TAG, "Temperature: " + weatherData.getMainData().getTemperature() + "°K");
+                            Log.d(TAG, "Humidity: " + weatherData.getMainData().getHumidity() + "%");
+                            Log.d(TAG, "Weather: " + weatherData.getWeatherConditions().get(0).getMain());
+                            Log.d(TAG, "Wind Speed: " + weatherData.getWindCondition().getSpeed() + " m/s");
 
-                        TextView cityTextView = findViewById(R.id.textViewCityName);
+                            TextView cityTextView = findViewById(R.id.textViewCityName);
 
-                        TextView temperatureTextView = findViewById(R.id.textViewTemperature);
-                        TextView humidityTextView = findViewById(R.id.textViewHumidity);
-                        TextView weatherConditionTextView = findViewById(R.id.textViewWeatherCondition);
-                        TextView windSpeedTextView = findViewById(R.id.textViewWindCondition);
+                            TextView temperatureTextView = findViewById(R.id.textViewTemperature);
+                            TextView humidityTextView = findViewById(R.id.textViewHumidity);
+                            TextView weatherConditionTextView = findViewById(R.id.textViewWeatherCondition);
+                            TextView windSpeedTextView = findViewById(R.id.textViewWindCondition);
 
-                        cityTextView.setText(selectedCity);
-                        temperatureTextView.setText(weatherData.getMainData().getTemperature() + "°K");
-                        humidityTextView.setText("Humidity:\n" + weatherData.getMainData().getHumidity() + "%");
-                        weatherConditionTextView.setText("Weather:\n" + weatherData.getWeatherConditions().get(0).getMain());
-                        windSpeedTextView.setText("Wind Speed:\n" + weatherData.getWindCondition().getSpeed() + " m/s");  }
-                } else {
-                    // Handle the error response here
+                            cityTextView.setText(selectedCity);
+                            temperatureTextView.setText(weatherData.getMainData().getTemperature() + "°K");
+                            humidityTextView.setText("Humidity:\n" + weatherData.getMainData().getHumidity() + "%");
+                            weatherConditionTextView.setText("Weather:\n" + weatherData.getWeatherConditions().get(0).getMain());
+                            windSpeedTextView.setText("Wind Speed:\n" + weatherData.getWindCondition().getSpeed() + " m/s");
+                        }
+                    } else {
+                        // Handle the error response here
 
-                    Log.e(TAG, "Request failed: " + response.message());
+                        Log.e(TAG, "Request failed: " + response.message());
+                    }
                 }
-            }
 
-            @Override
-            public void onFailure(Call<WeatherData> call, Throwable t) {
+                @Override
+                public void onFailure(Call<WeatherData> call, Throwable t) {
 
-                // Handle the request failure here
-                if (t instanceof HttpException) {
-                    HttpException httpException = (HttpException) t;
-                    int statusCode = httpException.code();
-                    Log.e(TAG, "Request failed with status code: " + statusCode);
-                    System.out.println(statusCode);
-                } else {
-                    System.out.println("failed");
+                    // Handle the request failure here
+                    if (t instanceof HttpException) {
+                        HttpException httpException = (HttpException) t;
+                        int statusCode = httpException.code();
+                        Log.e(TAG, "Request failed with status code: " + statusCode);
+                        System.out.println(statusCode);
+                    } else {
+                        System.out.println("failed");
 
-                    Log.e(TAG, "Request failed: " + t.getMessage());
+                        Log.e(TAG, "Request failed: " + t.getMessage());
+                    }
                 }
-            }
 
 
-
-
-        });
+            });
+        }
         backButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -216,7 +236,7 @@ public class WeatherActivity extends AppCompatActivity {
                 startActivity(intent);
             }
 
-    });
+        });
     }
 
     private class DateTimeInfoAsyncTask extends AsyncTask<String, Void, String> {
@@ -253,5 +273,23 @@ public class WeatherActivity extends AppCompatActivity {
             }
             return null;
         }
+    }
+    private WeatherData createDefaultWeatherData() {
+        // 创建具有默认值的 WeatherData 实例
+        MainData mainData = new MainData();
+        mainData.setTemperature(500.0);
+        mainData.setHumidity(500.0);
+        WeatherCondition weatherCondition = new WeatherCondition();
+        weatherCondition.setMain("Mocking");
+        WindCondition windCondition = new WindCondition();
+        windCondition.setSpeed(500.0);
+
+        WeatherData mockWeather = new WeatherData();
+
+        mockWeather.setMainData(mainData);
+        mockWeather.setWeatherConditions(Arrays.asList(weatherCondition));
+        mockWeather.setWindCondition(windCondition);
+
+        return mockWeather;
     }
 }
