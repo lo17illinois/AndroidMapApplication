@@ -91,7 +91,7 @@ public class WeatherTest {
         Espresso.unregisterIdlingResources(idlingResource1);
 
         // Wait for some time
-        IdlingResource idlingResource2 = new ElapsedTimeIdlingResource(50); // Adjust the waiting time as needed
+        IdlingResource idlingResource2 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource2);
 
         // Select the spinner entry with "Chicago"
@@ -101,14 +101,14 @@ public class WeatherTest {
         Espresso.unregisterIdlingResources(idlingResource2);
 
         // Wait for some time
-        IdlingResource idlingResource3 = new ElapsedTimeIdlingResource(50); // Adjust the waiting time as needed
+        IdlingResource idlingResource3 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource3);
 
         // Click the button ViewWeather
         onView(withId(R.id.buttonViewWeather)).perform(click());
 
         // Wait for some time
-        IdlingResource idlingResource4 = new ElapsedTimeIdlingResource(100); // Adjust the waiting time as needed
+        IdlingResource idlingResource4 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource4);
         Espresso.unregisterIdlingResources(idlingResource3);
 
@@ -124,7 +124,7 @@ public class WeatherTest {
         onView(withSpinner(R.id.spinner)).perform(click());
 
         // Wait for some time
-        IdlingResource idlingResource5 = new ElapsedTimeIdlingResource(50); // Adjust the waiting time as needed
+        IdlingResource idlingResource5 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource5);
         Espresso.unregisterIdlingResources(idlingResource4);
 
@@ -135,14 +135,14 @@ public class WeatherTest {
         Espresso.unregisterIdlingResources(idlingResource5);
 
         // Wait for some time
-        IdlingResource idlingResource6 = new ElapsedTimeIdlingResource(50); // Adjust the waiting time as needed
+        IdlingResource idlingResource6 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource6);
 
         // Click the button ViewWeather
         onView(withId(R.id.buttonViewWeather)).perform(click());
 
         // Wait for some time
-        IdlingResource idlingResource7 = new ElapsedTimeIdlingResource(100); // Adjust the waiting time as needed
+        IdlingResource idlingResource7 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource7);
         Espresso.unregisterIdlingResources(idlingResource6);
 
@@ -163,7 +163,7 @@ public class WeatherTest {
         onView(withId(R.id.logout)).perform(click());
 
         // Wait for some time
-        IdlingResource idlingResource9 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
+        IdlingResource idlingResource9 = new ElapsedTimeIdlingResource(100); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource9);
         Espresso.unregisterIdlingResources(idlingResource9);
     }

@@ -90,7 +90,7 @@ public class B_ShowMapActivityTest {
         Espresso.unregisterIdlingResources(idlingResource1);
 
         // Wait for some time
-        IdlingResource idlingResource2 = new ElapsedTimeIdlingResource(100); // Adjust the waiting time as needed
+        IdlingResource idlingResource2 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource2);
 
         // Select the spinner entry with "Chicago"
@@ -100,7 +100,7 @@ public class B_ShowMapActivityTest {
         Espresso.unregisterIdlingResources(idlingResource2);
 
         // Wait for some time
-        IdlingResource idlingResource3 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
+        IdlingResource idlingResource3 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource3);
 
         // Click the button ViewMap
@@ -126,7 +126,7 @@ public class B_ShowMapActivityTest {
         onView(withSpinner(R.id.spinner)).perform(click());
 
         // Wait for some time
-        IdlingResource idlingResource5 = new ElapsedTimeIdlingResource(100); // Adjust the waiting time as needed
+        IdlingResource idlingResource5 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource5);
         Espresso.unregisterIdlingResources(idlingResource4);
 
@@ -137,7 +137,7 @@ public class B_ShowMapActivityTest {
         Espresso.unregisterIdlingResources(idlingResource5);
 
         // Wait for some time
-        IdlingResource idlingResource6 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
+        IdlingResource idlingResource6 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource6);
 
         // Click the button ViewMap
@@ -168,7 +168,7 @@ public class B_ShowMapActivityTest {
         onView(withId(R.id.logout)).perform(click());
 
         // Wait for some time
-        IdlingResource idlingResource9 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
+        IdlingResource idlingResource9 = new ElapsedTimeIdlingResource(100); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource9);
         Espresso.unregisterIdlingResources(idlingResource8);
         Espresso.unregisterIdlingResources(idlingResource9);

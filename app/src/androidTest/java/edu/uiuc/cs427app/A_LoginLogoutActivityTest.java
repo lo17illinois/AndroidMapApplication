@@ -14,11 +14,15 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
+import androidx.annotation.NonNull;
 import androidx.test.espresso.IdlingPolicies;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import org.junit.Assert;
@@ -32,7 +36,7 @@ import java.util.concurrent.TimeUnit;
 //Tests the Logout functionality
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class A_LogoutActivityTest {
+public class A_LoginLogoutActivityTest {
 
     //Launches the LoginActivity at start of test
     @Rule
@@ -46,14 +50,16 @@ public class A_LogoutActivityTest {
     public void setUp() {
         IdlingPolicies.setMasterPolicyTimeout(60, TimeUnit.SECONDS);
         IdlingPolicies.setIdlingResourceTimeout(60, TimeUnit.SECONDS);
+        auth = FirebaseAuth.getInstance();
     }
 
     //Test steps
     @Test
     public void logoutTest() {
         //An existing user account/password just for the sake of login
-        String rightUsername = "yoyoyo3";
-        String rightPassword = "123456";
+        String rightUsername = "hadilhelaly";
+        String rightPassword = "hadil00";
+        String rightEmail = rightUsername + "@example.com";
 
         // Input the existing user account/password into their respective fields in the Login page
         onView(withId(R.id.username))
@@ -66,13 +72,30 @@ public class A_LogoutActivityTest {
 
         // Wait for some time
         try {
-            TimeUnit.SECONDS.sleep(10);
+            TimeUnit.SECONDS.sleep(5);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        // Assert
+        auth.signInWithEmailAndPassword(rightEmail, rightPassword)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>(){
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        System.out.println(task.getResult().getUser());
+                        Assert.assertTrue(task.isSuccessful());
+
+                    }
+                });
 
         // Assertion that the logout button is displayed at current page
         onView(withId(R.id.logout)).check(matches(isDisplayed()));
+
+        // Wait for some time
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         // Press logout (to LoginActivity page)
         onView(withId(R.id.logout)).perform(click());
@@ -89,7 +112,7 @@ public class A_LogoutActivityTest {
 
         // Wait for some time
         try {
-            TimeUnit.SECONDS.sleep(10);
+            TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -106,8 +129,6 @@ public class A_LogoutActivityTest {
                 }
             }
         });
-
-
     }
 
 }
