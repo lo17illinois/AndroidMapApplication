@@ -48,6 +48,7 @@ public class A_LoginLogoutActivityTest {
     //Allows time for UI to be setup
     @Before
     public void setUp() {
+        FirebaseAuth.getInstance().signOut();
         IdlingPolicies.setMasterPolicyTimeout(60, TimeUnit.SECONDS);
         IdlingPolicies.setIdlingResourceTimeout(60, TimeUnit.SECONDS);
         auth = FirebaseAuth.getInstance();
@@ -97,6 +98,9 @@ public class A_LoginLogoutActivityTest {
             e.printStackTrace();
         }
 
+
+
+
         // Press logout (to LoginActivity page)
         onView(withId(R.id.logout)).perform(click());
 
@@ -106,19 +110,10 @@ public class A_LoginLogoutActivityTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         // Assertion that the login message is displayed at current page
         onView(withId(R.id.loginText)).check(matches(isDisplayed()));
-
-        // Wait for some time
-        try {
-            TimeUnit.SECONDS.sleep(3);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         // Assertion that current user is logged out
-        auth.getInstance().addAuthStateListener(new FirebaseAuth.AuthStateListener() {
+        final FirebaseAuth.AuthStateListener authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(FirebaseAuth firebaseAuth) {
                 if (firebaseAuth.getCurrentUser() == null) {
@@ -128,7 +123,25 @@ public class A_LoginLogoutActivityTest {
                     Assert.fail(); // Assertion fails if the user is still logged in
                 }
             }
-        });
+        };
+
+        auth.getInstance().addAuthStateListener(authStateListener);
+
+        // Wait for some time
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Unregister the AuthStateListener to avoid interference with subsequent tests
+        auth.getInstance().removeAuthStateListener(authStateListener);
+        // Wait for some time
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }

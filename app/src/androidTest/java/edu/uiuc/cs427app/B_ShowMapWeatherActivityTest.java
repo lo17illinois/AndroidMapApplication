@@ -48,10 +48,10 @@ import androidx.test.espresso.IdlingResource;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
-//Tests the Weather functionality by showing two cities and asserts that the correct city name is shown accordingly
+//Tests the ShowMap functionality by showing two cities and asserts that the correct city and coordinates are shown accordingly
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class WeatherTest {
+public class B_ShowMapWeatherActivityTest {
 
     //Launches the LoginActivity at start of test
     @Rule
@@ -80,92 +80,132 @@ public class WeatherTest {
 
         // Click the login button
         onView(withId(R.id.button_login)).perform(click());
-
         // Wait for some time
-        IdlingResource idlingResource1 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
+        IdlingResource idlingResource1 = new ElapsedTimeIdlingResource(300); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource1);
-
-
         // Click the spinner
         onView(withSpinner(R.id.spinner)).perform(click());
         Espresso.unregisterIdlingResources(idlingResource1);
-
         // Wait for some time
         IdlingResource idlingResource2 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource2);
-
         // Select the spinner entry with "Chicago"
         onData(allOf(is(instanceOf(String.class)), is("Chicago")))
                 .inRoot(isPlatformPopup())
                 .perform(click());
         Espresso.unregisterIdlingResources(idlingResource2);
-
         // Wait for some time
         IdlingResource idlingResource3 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource3);
-
-        // Click the button ViewWeather
-        onView(withId(R.id.buttonViewWeather)).perform(click());
-
+        // Click the button ViewMap
+        onView(withId(R.id.buttonViewMap)).perform(click());
         // Wait for some time
-        IdlingResource idlingResource4 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
+        IdlingResource idlingResource4 = new ElapsedTimeIdlingResource(250); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource4);
         Espresso.unregisterIdlingResources(idlingResource3);
-
-        // Assertion that the R.id.textViewCityName displays "Chicago"
-        onView(withId(R.id.textViewCityName))
+        // Assertion that the R.id.location_name displays "Chicago"
+        onView(withId(R.id.location_name))
                 .check(matches(withText("Chicago")));
-
-
+        // Assertion that the R.id.locationGeoCoordinate displays the correct coordinates for Chicago
+        onView(withId(R.id.locationGeoCoordinate))
+                .check(matches(withText("41.8781136, -87.6297982")));
         // Press back (to MainActivity page)
         pressBackUnconditionally();
-
         // Click the spinner
         onView(withSpinner(R.id.spinner)).perform(click());
-
         // Wait for some time
         IdlingResource idlingResource5 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource5);
         Espresso.unregisterIdlingResources(idlingResource4);
-
         // Select the spinner entry with "New York"
         onData(allOf(is(instanceOf(String.class)), is("New York")))
                 .inRoot(isPlatformPopup())
                 .perform(click());
         Espresso.unregisterIdlingResources(idlingResource5);
-
         // Wait for some time
         IdlingResource idlingResource6 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource6);
-
-        // Click the button ViewWeather
-        onView(withId(R.id.buttonViewWeather)).perform(click());
-
+        // Click the button ViewMap
+        onView(withId(R.id.buttonViewMap)).perform(click());
         // Wait for some time
-        IdlingResource idlingResource7 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
+        IdlingResource idlingResource7 = new ElapsedTimeIdlingResource(250); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource7);
         Espresso.unregisterIdlingResources(idlingResource6);
-
-        // Assertion that the R.id.textViewCityName displays "New York"
-        onView(withId(R.id.textViewCityName))
+        // Assertion that the R.id.location_name displays "New York"
+        onView(withId(R.id.location_name))
                 .check(matches(withText("New York")));
-
+        // Assertion that the R.id.locationGeoCoordinate displays the correct coordinates for New York
+        onView(withId(R.id.locationGeoCoordinate))
+                .check(matches(withText("40.7127753, -74.0059728")));
         // Press back (to MainActivity page)
         pressBackUnconditionally();
         Espresso.unregisterIdlingResources(idlingResource7);
-
         // Wait for some time
-        IdlingResource idlingResource8 = new ElapsedTimeIdlingResource(50); // Adjust the waiting time as needed
+        IdlingResource idlingResource8 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
         Espresso.registerIdlingResources(idlingResource8);
 
 
+        // Click the spinner
+        onView(withSpinner(R.id.spinner)).perform(click());
+        Espresso.unregisterIdlingResources(idlingResource1);
+        // Wait for some time
+        IdlingResource idlingResource9 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
+        Espresso.registerIdlingResources(idlingResource9);
+        Espresso.unregisterIdlingResources(idlingResource8);
+        // Select the spinner entry with "Chicago"
+        onData(allOf(is(instanceOf(String.class)), is("Chicago")))
+                .inRoot(isPlatformPopup())
+                .perform(click());
+        Espresso.unregisterIdlingResources(idlingResource9);
+        // Wait for some time
+        IdlingResource idlingResource10 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
+        Espresso.registerIdlingResources(idlingResource10);
+        // Click the button ViewWeather
+        onView(withId(R.id.buttonViewWeather)).perform(click());
+        // Wait for some time
+        IdlingResource idlingResource11 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
+        Espresso.registerIdlingResources(idlingResource11);
+        Espresso.unregisterIdlingResources(idlingResource10);
+        // Assertion that the R.id.textViewCityName displays "Chicago"
+        onView(withId(R.id.textViewCityName))
+                .check(matches(withText("Chicago")));
+        // Press back (to MainActivity page)
+        pressBackUnconditionally();
+        // Click the spinner
+        onView(withSpinner(R.id.spinner)).perform(click());
+        // Wait for some time
+        IdlingResource idlingResource12 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
+        Espresso.registerIdlingResources(idlingResource12);
+        Espresso.unregisterIdlingResources(idlingResource11);
+        // Select the spinner entry with "New York"
+        onData(allOf(is(instanceOf(String.class)), is("New York")))
+                .inRoot(isPlatformPopup())
+                .perform(click());
+        Espresso.unregisterIdlingResources(idlingResource12);
+        // Wait for some time
+        IdlingResource idlingResource13 = new ElapsedTimeIdlingResource(15); // Adjust the waiting time as needed
+        Espresso.registerIdlingResources(idlingResource13);
+        // Click the button ViewWeather
+        onView(withId(R.id.buttonViewWeather)).perform(click());
+        // Wait for some time
+        IdlingResource idlingResource14 = new ElapsedTimeIdlingResource(150); // Adjust the waiting time as needed
+        Espresso.registerIdlingResources(idlingResource14);
+        Espresso.unregisterIdlingResources(idlingResource13);
+        // Assertion that the R.id.textViewCityName displays "New York"
+        onView(withId(R.id.textViewCityName)).check(matches(withText("New York")));
+        // Press back (to MainActivity page)
+        pressBackUnconditionally();
+        Espresso.unregisterIdlingResources(idlingResource14);
+        // Wait for some time
+        IdlingResource idlingResource15 = new ElapsedTimeIdlingResource(50); // Adjust the waiting time as needed
+        Espresso.registerIdlingResources(idlingResource15);
         // Press logout (to LoginActivity page)
         onView(withId(R.id.logout)).perform(click());
-
         // Wait for some time
-        IdlingResource idlingResource9 = new ElapsedTimeIdlingResource(100); // Adjust the waiting time as needed
-        Espresso.registerIdlingResources(idlingResource9);
-        Espresso.unregisterIdlingResources(idlingResource9);
+        IdlingResource idlingResource16 = new ElapsedTimeIdlingResource(100); // Adjust the waiting time as needed
+        Espresso.registerIdlingResources(idlingResource16);
+        Espresso.unregisterIdlingResources(idlingResource15);
+        Espresso.unregisterIdlingResources(idlingResource16);
     }
 
     //A custom matcher for identifying the spinner

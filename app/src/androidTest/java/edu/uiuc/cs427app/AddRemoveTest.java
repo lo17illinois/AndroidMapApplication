@@ -27,6 +27,8 @@ import androidx.test.espresso.Espresso;
 import androidx.test.espresso.IdlingPolicies;
 import androidx.test.espresso.IdlingResource;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -40,11 +42,13 @@ public class AddRemoveTest {
     public ActivityScenarioRule<LoginActivity> mActivityScenarioRule =
             new ActivityScenarioRule<>(LoginActivity.class);
 
+    private FirebaseAuth auth;
     // allows time for UI to be setup
     @Before
     public void setUp() {
-        IdlingPolicies.setMasterPolicyTimeout(20, TimeUnit.SECONDS);
-        IdlingPolicies.setIdlingResourceTimeout(20, TimeUnit.SECONDS);
+        FirebaseAuth.getInstance().signOut();
+        IdlingPolicies.setMasterPolicyTimeout(60, TimeUnit.SECONDS);
+        IdlingPolicies.setIdlingResourceTimeout(60, TimeUnit.SECONDS);
     }
 
     @Test
